@@ -1,0 +1,9 @@
+bin/*
+target/*
+.settings/*
+.project
+.classpath
+.idea/
+*.eml
+*.iml
+.DS_*
