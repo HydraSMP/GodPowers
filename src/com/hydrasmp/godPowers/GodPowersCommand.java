@@ -21,21 +21,9 @@ public class GodPowersCommand implements CommandExecutor
     		player = (Player) sender;	
     			
 				if(args.length == 0)
-				{
-				player.sendMessage(ChatColor.DARK_AQUA+"About the "+ChatColor.DARK_GREEN+"godPowers"+ChatColor.DARK_AQUA+" Project:");		
-				player.sendMessage(ChatColor.GOLD+"godPowers is an "+ChatColor.RED+"Open Source"+ChatColor.GOLD+" plugin created in December 2011");	
-				player.sendMessage(ChatColor.GOLD+"by "+ChatColor.BLUE+"FriedTaco"+ChatColor.GOLD+". It is currently developed by "+ChatColor.BLUE+"Swift"+ChatColor.GOLD+".");
-				player.sendMessage(ChatColor.GOLD+"The goal is to provide a set of commands to give users powers based on greek and roman mythology.");	
-				player.sendMessage(ChatColor.DARK_AQUA+"Tips:");	
+				{;
+				player.sendMessage(ChatColor.DARK_AQUA+"Tip:");
 				player.sendMessage(ChatColor.GOLD+"- "+ChatColor.GREEN+"Use "+ChatColor.RED+"/godpowers commands"+ChatColor.GREEN+" to see all commands");
-				player.sendMessage(ChatColor.DARK_AQUA+"Developers:");	
-				player.sendMessage(ChatColor.GOLD+"- "+ChatColor.GREEN+"SwiftDev"+ChatColor.BLUE+" (Developer)");	
-				player.sendMessage(ChatColor.GOLD+"- "+ChatColor.GREEN+"FriedTaco"+ChatColor.BLUE+" (Former Developer)");	
-				player.sendMessage(ChatColor.DARK_AQUA+"Useful Links:");	
-				player.sendMessage(ChatColor.GOLD+"- "+ChatColor.GREEN+"#godpowers @ irc.esper.net"+ChatColor.GOLD+" IRC Chat");	
-				player.sendMessage(ChatColor.GOLD+"- "+ChatColor.GREEN+"bit.ly/GodPowers"+ChatColor.GOLD+" Bukkit Plugin Page");
-				player.sendMessage(ChatColor.DARK_AQUA+"Donation Info:");	
-				player.sendMessage(ChatColor.GOLD+"- "+ChatColor.GREEN+"goldgamermc@gmail.com"+ChatColor.GOLD+" Paypal");	
 				}else if(args.length == 1){
 				if(args[0].equalsIgnoreCase("commands")){
 		    		if(player.hasPermission("godpowers.commands"))
@@ -51,8 +39,11 @@ public class GodPowersCommand implements CommandExecutor
 		    		}
 				}
 				if(args[0].equalsIgnoreCase("credits")){
-					player.sendMessage(ChatColor.DARK_AQUA+"Credits:");	
-					player.sendMessage(ChatColor.GOLD+"- "+ChatColor.GREEN+"UnceCrafter"+ChatColor.BLUE+" (/poseidon)");	
+					player.sendMessage(ChatColor.DARK_AQUA+"Credits:");
+                    player.sendMessage(ChatColor.GOLD+"- "+ChatColor.GREEN+"Hydra SMP"+ChatColor.BLUE+" (Current Developer)");
+                    player.sendMessage(ChatColor.GOLD+"- "+ChatColor.GREEN+"SwiftDev"+ChatColor.BLUE+" (Former Developer)");
+                    player.sendMessage(ChatColor.GOLD+"- "+ChatColor.GREEN+"FriedTaco"+ChatColor.BLUE+" (Original Developer)");
+                    player.sendMessage(ChatColor.GOLD+"- "+ChatColor.GREEN+"UnceCrafter"+ChatColor.BLUE+" (/poseidon)");
 				}
 				}
 				else
