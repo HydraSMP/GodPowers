@@ -1,7 +1,7 @@
 name: godPowers
-main: com.FriedTaco.taco.godPowers.godPowers
-version: 2.9
-author: Swift
+main: com.hydrasmp.godPowers.godPowers
+version: 2.9.1
+author: Hydra SMP
 commands:
     godmode:
         description: Become invincible!
