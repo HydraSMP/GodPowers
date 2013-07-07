@@ -78,23 +78,6 @@ public class godPowersPlayerListener implements Listener {
     	{
     		plugin.getServer().getScheduler().scheduleSyncDelayedTask(plugin, new Runnable() {
                 public void run() {
-        	    	try {
-        	    	    Metrics metrics = new Metrics(plugin);
-        	    	 // Plot the total amount of protections
-        	    	    metrics.addCustomData(new Metrics.Plotter("Total Players using Godmode") {
-
-        	    	        @Override
-        	    	        public int getValue() {
-        	    	            return plugin.godmodeEnabled.size();
-        	    	        }
-
-        	    	    });
-        	    	    metrics.start();
-        	    	    System.out.println("[GodPowers] Successfully sent stats to MCStats/Metrics ");
-        	    	} catch (IOException e) {
-        	    		System.out.println("[GodPowers] Failed to send stats to MCStats/Metrics :-(");
-        	    	    // Failed to submit the stats :-(
-        	    	}
                 	player.sendMessage("As you enter the world, you feel your godly powers returning.");
                 	player.setDisplayName(plugin.title + player.getDisplayName());
                 	plugin.godmodeEnabled.add(player.getName());

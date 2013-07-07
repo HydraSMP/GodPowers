@@ -28,23 +28,6 @@ public class godModeCommand implements CommandExecutor
     		{
 	    		if(split.length == 0)
 	    		{
-	    			try{
-		    	    Metrics metrics = new Metrics(plugin);
-			    	 // Plot the total amount of protections
-			    	    metrics.addCustomData(new Metrics.Plotter("Total Players using Godmode") {
-
-			    	        @Override
-			    	        public int getValue() {
-			    	            return plugin.godmodeEnabled.size();
-			    	        }
-
-			    	    });
-			    	    metrics.start();
-			    	    System.out.println("[GodPowers] Successfully sent stats to MCStats/Metrics ");
-			    	} catch (IOException e) {
-			    		System.out.println("[GodPowers] Failed to send stats to MCStats/Metrics :-(");
-			    	    // Failed to submit the stats :-(
-			    	}
 	    			if(plugin.godmodeEnabled.contains(player.getName()))
 	    			{
 	    				if(command.getName().equalsIgnoreCase("godmodeon"))
