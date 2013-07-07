@@ -1,6 +1,5 @@
-package com.FriedTaco.taco.godPowers;
+package com.hydrasmp.godPowers;
 
-import java.util.ArrayList;
 import org.bukkit.ChatColor;
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandExecutor;
@@ -9,12 +8,12 @@ import org.bukkit.enchantments.Enchantment;
 import org.bukkit.entity.Player;
 import org.bukkit.inventory.ItemStack;
 
-public class PlutusCommand implements CommandExecutor
+public class FusRoDAH implements CommandExecutor
 {
 	private Player player;
 	@SuppressWarnings("unused")
 	private final godPowers plugin;
-    public PlutusCommand(godPowers instance) 
+    public FusRoDAH(godPowers instance) 
     {
         plugin = instance;
     }
@@ -25,28 +24,24 @@ public class PlutusCommand implements CommandExecutor
     	if(sender instanceof Player)
     	{
     		player = (Player) sender;
-    		if(player.hasPermission("godpowers.plutus"))
+    		if(player.hasPermission("godpowers.fusrodah"))
     		{
     			if(split.length > 0)
     			{
-    				player.sendMessage(ChatColor.RED + "Incorrect syntax. Correct usage: '/plutus'");
+    				player.sendMessage(ChatColor.RED + "Incorrect syntax. Correct usage: '/FusRoDah'");
     				return true;
     			}
     			else
     			{
-    				int poss[] = {256,257,258,269,270,271,273,274,275,277,278,279,284,285,286};
-    				ArrayList<Integer> possible = new ArrayList<Integer>();
-    				for(int i=0;i<poss.length;i++)
-    					possible.add(poss[i]);
     				ItemStack i = player.getItemInHand();
-    				if(i != null && possible.contains(Integer.valueOf(i.getTypeId())))
+    				if(i != null && i.getTypeId() != 0)
     				{
-    					player.sendMessage(ChatColor.GOLD + "You suddenly feel as if earthly riches will come easily to you.");
-    					i.addUnsafeEnchantment(Enchantment.LOOT_BONUS_BLOCKS, 25);
+    					player.sendMessage(ChatColor.DARK_RED + "Fus ro DAH!!");
+    					i.addUnsafeEnchantment(Enchantment.KNOCKBACK, 10);
     				}
     				else
     				{
-    					player.sendMessage(ChatColor.RED + "You aren't holding the correct type of item.");
+    					player.sendMessage(ChatColor.RED + "You aren't holding anything.");
     				}
     				return true;
     			}

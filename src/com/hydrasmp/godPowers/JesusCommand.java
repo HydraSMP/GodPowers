@@ -1,4 +1,4 @@
-package com.FriedTaco.taco.godPowers;
+package com.hydrasmp.godPowers;
 
 //import org.bukkit.World;
 import org.bukkit.ChatColor;
@@ -6,7 +6,7 @@ import org.bukkit.command.Command;
 import org.bukkit.command.CommandExecutor;
 import org.bukkit.command.CommandSender;
 import org.bukkit.entity.Player;
-import com.FriedTaco.taco.godPowers.Jesus.Raft;
+import com.hydrasmp.godPowers.Jesus.Raft;
 
 public class JesusCommand implements CommandExecutor
 {

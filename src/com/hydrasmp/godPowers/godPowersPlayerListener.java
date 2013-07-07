@@ -1,4 +1,4 @@
-package com.FriedTaco.taco.godPowers;
+package com.hydrasmp.godPowers;
 
 import java.io.IOException;
 import java.util.ArrayList;
@@ -31,7 +31,7 @@ import org.bukkit.potion.PotionEffectType;
 import org.bukkit.util.BlockIterator;
 import org.bukkit.util.Vector;
 
-import com.FriedTaco.taco.godPowers.Jesus.Raft;
+import com.hydrasmp.godPowers.Jesus.Raft;
 
 
 

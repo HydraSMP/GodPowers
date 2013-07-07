@@ -1,4 +1,4 @@
-package com.FriedTaco.taco.godPowers;
+package com.hydrasmp.godPowers;
 
 
 //import org.bukkit.World;

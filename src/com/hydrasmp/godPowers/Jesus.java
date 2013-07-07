@@ -1,4 +1,4 @@
-package com.FriedTaco.taco.godPowers;
+package com.hydrasmp.godPowers;
 
 import java.util.Hashtable;
 import org.bukkit.block.Block;

@@ -1,4 +1,4 @@
-package com.FriedTaco.taco.godPowers;
+package com.hydrasmp.godPowers;
 
 //import org.bukkit.World;
 import org.bukkit.ChatColor;
@@ -7,33 +7,35 @@ import org.bukkit.command.CommandExecutor;
 import org.bukkit.command.CommandSender;
 import org.bukkit.entity.Player;
 
-public class SuperJumpCommand implements CommandExecutor
+public class DieCommand implements CommandExecutor
 {
 	private Player player;
 	private final godPowers plugin;
-    public SuperJumpCommand(godPowers instance) 
+    public DieCommand(godPowers instance) 
     {
         plugin = instance;
     }
-    @Override
+
+	@Override
     public boolean onCommand(CommandSender sender, Command command, String label, String[] args)
     {
     	if(sender instanceof Player)
     	{
     		player = (Player) sender;
-    		if(player.hasPermission("godpowers.superjump"))
+    		if(player.hasPermission("godpowers.die"))
     		{
-	    		if(plugin.superJumper.contains(player.getName()))
-	    		{
-	    			plugin.superJumper.remove(player.getName());
-	    			player.sendMessage(ChatColor.BLUE + "You can no longer jump great heights.");
-	    		}
-	    		else
-	        	{
-	    			player.sendMessage(ChatColor.BLUE + "You feel like you can leap tall building in a single bound!");
-	        		plugin.superJumper.add(player.getName());
-	        	}
-	    		return true;
+    			if(plugin.godmodeEnabled.contains(player.getName()))
+    			{
+    				player.sendMessage(ChatColor.BLUE + "Your godly powers prevent you from death.");
+    				return true;
+    			}
+    			else
+    			{			
+    				player.setHealth(0);
+    				plugin.dropDeadItems(player);
+    				player.sendMessage("You have died.");
+    				return true;
+    			}
     		}
     		else
     		{
