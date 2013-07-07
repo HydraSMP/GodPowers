@@ -28,7 +28,6 @@ public class GodPowersCommand implements CommandExecutor
 				player.sendMessage(ChatColor.GOLD+"The goal is to provide a set of commands to give users powers based on greek and roman mythology.");	
 				player.sendMessage(ChatColor.DARK_AQUA+"Tips:");	
 				player.sendMessage(ChatColor.GOLD+"- "+ChatColor.GREEN+"Use "+ChatColor.RED+"/godpowers commands"+ChatColor.GREEN+" to see all commands");
-				player.sendMessage(ChatColor.GOLD+"- "+ChatColor.GREEN+"Use "+ChatColor.RED+"/godpowers update"+ChatColor.GREEN+" to manually install updates");
 				player.sendMessage(ChatColor.DARK_AQUA+"Developers:");	
 				player.sendMessage(ChatColor.GOLD+"- "+ChatColor.GREEN+"SwiftDev"+ChatColor.BLUE+" (Developer)");	
 				player.sendMessage(ChatColor.GOLD+"- "+ChatColor.GREEN+"FriedTaco"+ChatColor.BLUE+" (Former Developer)");	
@@ -51,16 +50,6 @@ public class GodPowersCommand implements CommandExecutor
 		    			return true;
 		    		}
 				}
-				if(args[0].equalsIgnoreCase("update")){
-					Updater updater = new Updater(plugin, "godpowers", plugin.file, Updater.UpdateType.NO_DOWNLOAD, false);	
-					if(updater.getResult().equals(Updater.UpdateResult.NO_UPDATE)){
-						player.sendMessage(ChatColor.GREEN+"godPowers: "+ChatColor.GOLD+"There is currently no updates available.");		
-					}else if(updater.getResult().equals(Updater.UpdateResult.UPDATE_AVAILABLE)){
-						player.sendMessage(ChatColor.GREEN+"godPowers: "+ChatColor.GOLD+"There is currently an update available, downloading now...");	
-						@SuppressWarnings("unused")
-						Updater updater2 = new Updater(plugin, "godpowers", plugin.file, Updater.UpdateType.DEFAULT, true);	
-					}
-				}
 				if(args[0].equalsIgnoreCase("credits")){
 					player.sendMessage(ChatColor.DARK_AQUA+"Credits:");	
 					player.sendMessage(ChatColor.GOLD+"- "+ChatColor.GREEN+"UnceCrafter"+ChatColor.BLUE+" (/poseidon)");	
@@ -68,7 +57,7 @@ public class GodPowersCommand implements CommandExecutor
 				}
 				else
 				{
-					player.sendMessage("Incorrect syntax. Use '/godpowers [commands/update]'");
+					player.sendMessage("Incorrect syntax. Use '/godpowers [commands]'");
 				}
 				return true;    		
     	}        

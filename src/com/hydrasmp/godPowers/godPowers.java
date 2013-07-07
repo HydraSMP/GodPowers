@@ -57,8 +57,6 @@ import org.bukkit.util.Vector;
 		public double DemiModifier = 0;
 		public boolean godModeOnLogin = true;
 		public boolean godTools = true;
-		public boolean autoUpdate = true;
-		public boolean checkUpdate = true;
 		public int medusaFreezeTime = 10;
 		public File file;
 		 public void loadConfig(){
@@ -72,14 +70,8 @@ import org.bukkit.util.Vector;
 	            	this.getConfig().set("DemiGodDamageModifier", 0.2);
 	            if(!this.getConfig().contains("GodToolsEnabled"))
 	            	this.getConfig().set("GodToolsEnabled", true);
-	            if(!this.getConfig().contains("AutoUpdateEnabled"))
-	            	this.getConfig().set("AutoUpdateEnabled", false);
-	            if(!this.getConfig().contains("CheckUpdateEnabled"))
-	            	this.getConfig().set("CheckUpdateEnabled", true);
 	            if(!this.getConfig().contains("MedusaFreezeTime"))
 	            	this.getConfig().set("MedusaFreezeTime", 10);
-	            checkUpdate = this.getConfig().getBoolean("CheckUpdateEnabled",true);
-	            autoUpdate = this.getConfig().getBoolean("AutoUpdateEnabled",false);
 	            title = this.getConfig().getString("GodModeTitle", "");
 	            godModeOnLogin = this.getConfig().getBoolean("GodModeOnLogin", true);
 	            DemiModifier= this.getConfig().getDouble("DemiGodDamageModifier", 0.2);
@@ -98,49 +90,6 @@ import org.bukkit.util.Vector;
 	    	file = this.getFile();
 	    	@SuppressWarnings("unused")
 			BukkitTask TaskName = new OnOneSecond(this).runTaskTimer(this, 25, 25);
-	    	try {
-	    	    Metrics metrics = new Metrics(this);
-	    	 // Plot the total amount of protections
-	    	    metrics.addCustomData(new Metrics.Plotter("Total Players using Godmode") {
-
-	    	        @Override
-	    	        public int getValue() {
-	    	            return godmodeEnabled.size();
-	    	        }
-
-	    	    });
-	    	    metrics.start();
-	    	    System.out.println("[GodPowers] Successfully sent stats to MCStats/Metrics ");
-	    	} catch (IOException e) {
-	    		System.out.println("[GodPowers] Failed to send stats to MCStats/Metrics :-(");
-	    	    // Failed to submit the stats :-(
-	    	}
-	    	if(autoUpdate == true){
-	    		@SuppressWarnings("unused")
-				Updater updater = new Updater(this, "godpowers", this.getFile(), Updater.UpdateType.DEFAULT, false);	
-	    	}
-	    	if(checkUpdate == true){
-	    		String str2 = null;
-		    	try {
-		    	    // Create a URL for the desired page
-		    	    URL url = new URL("https://dl.dropboxusercontent.com/s/6vds499fw62s84u/godPowersVersion.txt?token_hash=AAHXoUyvrsAvKT4hZVQ6zqdnQPJ-1Jn_sLQkJ9rDlwr-NQ&dl=1");
-		    	    BufferedReader in = new BufferedReader(new InputStreamReader(url.openStream()));
-		    	    String str;
-		    	    while ((str = in.readLine()) != null) {
-		    	        str2 = str;
-		    	    }
-		    	    in.close();
-		    	} catch (MalformedURLException e) {
-		    		System.out.println("[GodPowers] Failed to check version.");	
-		    	} catch (IOException e) {
-		    		System.out.println("[GodPowers] Failed to check version.");	
-		    	}
-		    	if(str2 != null){
-		    	if(Double.valueOf(this.getDescription().getVersion()) < Double.parseDouble(str2)){
-		    	this.getServer().broadcastMessage(ChatColor.RED+"[godPowers] There is an updated version of godPowers available: http://bit.ly/GodPowers");	
-		    	}
-		    	}
-	    	}
 	    	String message = "[GodPowers] Successfully registered command ";
 	    	String error = "[GodPowers] ERROR another plugin has already taken the command ";
 	    	try{
