@@ -22,8 +22,7 @@ public class GodPowersCommand implements CommandExecutor
     			
 				if(args.length == 0)
 				{;
-				player.sendMessage(ChatColor.DARK_AQUA+"Tip:");
-				player.sendMessage(ChatColor.GOLD+"- "+ChatColor.GREEN+"Use "+ChatColor.RED+"/godpowers commands"+ChatColor.GREEN+" to see all commands");
+				player.sendMessage(ChatColor.GREEN+"Use "+ChatColor.RED+"/godpowers commands"+ChatColor.GREEN+" to see all commands");
 				}else if(args.length == 1){
 				if(args[0].equalsIgnoreCase("commands")){
 		    		if(player.hasPermission("godpowers.commands"))
@@ -40,10 +39,10 @@ public class GodPowersCommand implements CommandExecutor
 				}
 				if(args[0].equalsIgnoreCase("credits")){
 					player.sendMessage(ChatColor.DARK_AQUA+"Credits:");
-                    player.sendMessage(ChatColor.GOLD+"- "+ChatColor.GREEN+"Hydra SMP"+ChatColor.BLUE+" (Current Developer)");
-                    player.sendMessage(ChatColor.GOLD+"- "+ChatColor.GREEN+"SwiftDev"+ChatColor.BLUE+" (Former Developer)");
-                    player.sendMessage(ChatColor.GOLD+"- "+ChatColor.GREEN+"FriedTaco"+ChatColor.BLUE+" (Original Developer)");
-                    player.sendMessage(ChatColor.GOLD+"- "+ChatColor.GREEN+"UnceCrafter"+ChatColor.BLUE+" (/poseidon)");
+                    player.sendMessage(ChatColor.GOLD+"- "+ChatColor.GREEN+"Hydra SMP"+ChatColor.DARK_AQUA+" (Current Developer)");
+                    player.sendMessage(ChatColor.GOLD+"- "+ChatColor.GREEN+"SwiftDev"+ChatColor.DARK_AQUA+" (Former Developer)");
+                    player.sendMessage(ChatColor.GOLD+"- "+ChatColor.GREEN+"FriedTaco"+ChatColor.DARK_AQUA+" (Original Developer)");
+                    player.sendMessage(ChatColor.GOLD+"- "+ChatColor.GREEN+"UnceCrafter"+ChatColor.DARK_AQUA+" (/poseidon)");
 				}
 				}
 				else
