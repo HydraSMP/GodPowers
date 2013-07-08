@@ -39,10 +39,10 @@ public class GodPowersCommand implements CommandExecutor
 				}
 				if(args[0].equalsIgnoreCase("credits")){
 					player.sendMessage(ChatColor.DARK_AQUA+"Credits:");
-                    player.sendMessage(ChatColor.GOLD+"- "+ChatColor.GREEN+"Hydra SMP"+ChatColor.DARK_AQUA+" (Current Developer)");
-                    player.sendMessage(ChatColor.GOLD+"- "+ChatColor.GREEN+"SwiftDev"+ChatColor.DARK_AQUA+" (Former Developer)");
-                    player.sendMessage(ChatColor.GOLD+"- "+ChatColor.GREEN+"FriedTaco"+ChatColor.DARK_AQUA+" (Original Developer)");
-                    player.sendMessage(ChatColor.GOLD+"- "+ChatColor.GREEN+"UnceCrafter"+ChatColor.DARK_AQUA+" (/poseidon)");
+					player.sendMessage(ChatColor.GOLD+"- "+ChatColor.GREEN+"Hydra SMP"+ChatColor.DARK_AQUA+" (Current Developer)");
+					player.sendMessage(ChatColor.GOLD+"- "+ChatColor.GREEN+"SwiftDev"+ChatColor.DARK_AQUA+" (Former Developer)");
+					player.sendMessage(ChatColor.GOLD+"- "+ChatColor.GREEN+"FriedTaco"+ChatColor.DARK_AQUA+" (Original Developer)");
+					player.sendMessage(ChatColor.GOLD+"- "+ChatColor.GREEN+"UnceCrafter"+ChatColor.DARK_AQUA+" (/poseidon)");
 				}
 				}
 				else
