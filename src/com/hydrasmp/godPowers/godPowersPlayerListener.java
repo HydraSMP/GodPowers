@@ -115,14 +115,7 @@ public class godPowersPlayerListener implements Listener {
     	    if (m == Material.STATIONARY_WATER || m == Material.WATER) {
     	    event.getPlayer().addPotionEffect(new PotionEffect(PotionEffectType.INCREASE_DAMAGE,120,2));
     	    event.getPlayer().setRemainingAir(300);
-    	    }	
-    	}
-    	if(plugin.godmodeEnabled.contains(event.getPlayer().getName())){
-    	    Material m = event.getPlayer().getLocation().getBlock().getType();
-    	    if (m == Material.STATIONARY_WATER || m == Material.WATER) {
-    	    event.getPlayer().addPotionEffect(new PotionEffect(PotionEffectType.INCREASE_DAMAGE,120,2));
-    	    event.getPlayer().setRemainingAir(300);
-    	    }	
+    	    }
     	}
     	if(plugin.isMedusa.contains(event.getPlayer().getName()))
 		{
