@@ -71,9 +71,6 @@ public class godPowersPlayerListener implements Listener {
     public void onPlayerJoin(PlayerJoinEvent event) 
     {
     	final Player player = event.getPlayer();
-    	if(player.getDisplayName().equalsIgnoreCase("goldgamermc")){
-    	plugin.getServer().broadcastMessage(ChatColor.DARK_GREEN+"[godPowers] "+ChatColor.GOLD+"The developer of godPowers has joined the game.");	
-    	}
     	if(plugin.godModeOnLogin && player.hasPermission("godpowers.godmodeonlogin"))
     	{
     		plugin.getServer().getScheduler().scheduleSyncDelayedTask(plugin, new Runnable() {
