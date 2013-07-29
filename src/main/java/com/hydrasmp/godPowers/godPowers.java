@@ -298,19 +298,19 @@ public class godPowers extends JavaPlugin {
                     case 256:
                         i.addEnchantment(Enchantment.DIG_SPEED, 5);
                         i.addEnchantment(Enchantment.DURABILITY, 3);
-                        //i.addEnchantment(Enchantment.SILK_TOUCH, 1);
+                        i.addEnchantment(Enchantment.SILK_TOUCH, 1);
                         i.addEnchantment(Enchantment.LOOT_BONUS_BLOCKS, 3);
                         break;
                     case 257:
                         i.addEnchantment(Enchantment.DIG_SPEED, 5);
                         i.addEnchantment(Enchantment.DURABILITY, 3);
-                        //i.addEnchantment(Enchantment.SILK_TOUCH, 1);
+                        i.addEnchantment(Enchantment.SILK_TOUCH, 1);
                         i.addEnchantment(Enchantment.LOOT_BONUS_BLOCKS, 3);
                         break;
                     case 258:
                         i.addEnchantment(Enchantment.DIG_SPEED, 5);
                         i.addEnchantment(Enchantment.DURABILITY, 3);
-                        //i.addEnchantment(Enchantment.SILK_TOUCH, 1);
+                        i.addEnchantment(Enchantment.SILK_TOUCH, 1);
                         i.addEnchantment(Enchantment.LOOT_BONUS_BLOCKS, 3);
                         break;
                     case 261:
@@ -338,19 +338,19 @@ public class godPowers extends JavaPlugin {
                     case 269:
                         i.addEnchantment(Enchantment.DIG_SPEED, 5);
                         i.addEnchantment(Enchantment.DURABILITY, 3);
-                        //i.addEnchantment(Enchantment.SILK_TOUCH, 1);
+                        i.addEnchantment(Enchantment.SILK_TOUCH, 1);
                         i.addEnchantment(Enchantment.LOOT_BONUS_BLOCKS, 3);
                         break;
                     case 270:
                         i.addEnchantment(Enchantment.DIG_SPEED, 5);
                         i.addEnchantment(Enchantment.DURABILITY, 3);
-                        //i.addEnchantment(Enchantment.SILK_TOUCH, 1);
+                        i.addEnchantment(Enchantment.SILK_TOUCH, 1);
                         i.addEnchantment(Enchantment.LOOT_BONUS_BLOCKS, 3);
                         break;
                     case 271:
                         i.addEnchantment(Enchantment.DIG_SPEED, 5);
                         i.addEnchantment(Enchantment.DURABILITY, 3);
-                        //i.addEnchantment(Enchantment.SILK_TOUCH, 1);
+                        i.addEnchantment(Enchantment.SILK_TOUCH, 1);
                         i.addEnchantment(Enchantment.LOOT_BONUS_BLOCKS, 3);
                         break;
                     case 272:
@@ -364,7 +364,7 @@ public class godPowers extends JavaPlugin {
                     case 273:
                         i.addEnchantment(Enchantment.DIG_SPEED, 5);
                         i.addEnchantment(Enchantment.DURABILITY, 3);
-                        //i.addEnchantment(Enchantment.SILK_TOUCH, 1);
+                        i.addEnchantment(Enchantment.SILK_TOUCH, 1);
                         i.addEnchantment(Enchantment.LOOT_BONUS_BLOCKS, 3);
                         break;
                     case 274:
@@ -376,7 +376,7 @@ public class godPowers extends JavaPlugin {
                     case 275:
                         i.addEnchantment(Enchantment.DIG_SPEED, 5);
                         i.addEnchantment(Enchantment.DURABILITY, 3);
-                        //i.addEnchantment(Enchantment.SILK_TOUCH, 1);
+                        i.addEnchantment(Enchantment.SILK_TOUCH, 1);
                         i.addEnchantment(Enchantment.LOOT_BONUS_BLOCKS, 3);
                         break;
                     case 276:
@@ -390,19 +390,19 @@ public class godPowers extends JavaPlugin {
                     case 277:
                         i.addEnchantment(Enchantment.DIG_SPEED, 5);
                         i.addEnchantment(Enchantment.DURABILITY, 3);
-                        //i.addEnchantment(Enchantment.SILK_TOUCH, 1);
+                        i.addEnchantment(Enchantment.SILK_TOUCH, 1);
                         i.addEnchantment(Enchantment.LOOT_BONUS_BLOCKS, 3);
                         break;
                     case 278:
                         i.addEnchantment(Enchantment.DIG_SPEED, 5);
                         i.addEnchantment(Enchantment.DURABILITY, 3);
-                        //i.addEnchantment(Enchantment.SILK_TOUCH, 1);
+                        i.addEnchantment(Enchantment.SILK_TOUCH, 1);
                         i.addEnchantment(Enchantment.LOOT_BONUS_BLOCKS, 3);
                         break;
                     case 279:
                         i.addEnchantment(Enchantment.DIG_SPEED, 5);
                         i.addEnchantment(Enchantment.DURABILITY, 3);
-                        //i.addEnchantment(Enchantment.SILK_TOUCH, 1);
+                        i.addEnchantment(Enchantment.SILK_TOUCH, 1);
                         i.addEnchantment(Enchantment.LOOT_BONUS_BLOCKS, 3);
                         break;
                     case 283:
@@ -416,19 +416,19 @@ public class godPowers extends JavaPlugin {
                     case 284:
                         i.addEnchantment(Enchantment.DIG_SPEED, 5);
                         i.addEnchantment(Enchantment.DURABILITY, 3);
-                        //i.addEnchantment(Enchantment.SILK_TOUCH, 1);
+                        i.addEnchantment(Enchantment.SILK_TOUCH, 1);
                         i.addEnchantment(Enchantment.LOOT_BONUS_BLOCKS, 3);
                         break;
                     case 285:
                         i.addEnchantment(Enchantment.DIG_SPEED, 5);
                         i.addEnchantment(Enchantment.DURABILITY, 3);
-                        //i.addEnchantment(Enchantment.SILK_TOUCH, 1);
+                        i.addEnchantment(Enchantment.SILK_TOUCH, 1);
                         i.addEnchantment(Enchantment.LOOT_BONUS_BLOCKS, 3);
                         break;
                     case 286:
                         i.addEnchantment(Enchantment.DIG_SPEED, 5);
                         i.addEnchantment(Enchantment.DURABILITY, 3);
-                        //i.addEnchantment(Enchantment.SILK_TOUCH, 1);
+                        i.addEnchantment(Enchantment.SILK_TOUCH, 1);
                         i.addEnchantment(Enchantment.LOOT_BONUS_BLOCKS, 3);
                         break;
                     case 298:
