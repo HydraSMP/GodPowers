@@ -25,7 +25,7 @@ public class MedusaCommand implements CommandExecutor {
                     player.sendMessage(ChatColor.RED + "Incorrect syntax. Correct usage: '/medusa'");
                     return true;
                 } else {
-                    if (plugin.isMedusa.contains(player.getName()) == false) {
+                    if (!plugin.isMedusa.contains(player.getName())) {
                         player.sendMessage(ChatColor.GREEN + "The gods have cursed you with the power to turn people to stone.");
                         plugin.isMedusa.add(player.getName());
                     } else {

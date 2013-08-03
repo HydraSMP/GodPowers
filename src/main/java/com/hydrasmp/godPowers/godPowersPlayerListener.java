@@ -122,7 +122,7 @@ public class godPowersPlayerListener implements Listener {
                         isAlreadyUnder = true;
                     }
                 }
-                if (isAlreadyUnder == false) {
+                if (!isAlreadyUnder) {
                     plugin.isUnderMedusaInfluence.add(new MedusaPlayer(target, plugin.medusaFreezeTime, player));
                     target.sendMessage(ChatColor.GREEN + "Medusa has looked at you, you feel your skin turning to stone. You cannot move for " + plugin.medusaFreezeTime + " seconds.");
                 }
