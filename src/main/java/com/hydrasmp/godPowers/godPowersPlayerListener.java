@@ -100,6 +100,9 @@ public class godPowersPlayerListener implements Listener {
     		event.getTo().getBlock().getRelative(0,-1,0).setTypeId(89);
     	}
     	*/
+        if(plugin.isHermes.contains(event.getPlayer().getName())){
+                event.getPlayer().addPotionEffect(new PotionEffect(PotionEffectType.SPEED,120,6));
+        }
         if (plugin.isPoseidon.contains(event.getPlayer().getName())) {
             Material m = event.getPlayer().getLocation().getBlock().getType();
             if (m == Material.STATIONARY_WATER || m == Material.WATER) {
