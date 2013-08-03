@@ -31,6 +31,7 @@ public class godPowers extends JavaPlugin {
     public ArrayList<String> isJesus = new ArrayList<String>();
     public ArrayList<MedusaPlayer> isUnderMedusaInfluence = new ArrayList<MedusaPlayer>();
     public ArrayList<String> isInferno = new ArrayList<String>();
+    public ArrayList<String> isHermes = new ArrayList<String>();
     public ArrayList<String> isPoseidon = new ArrayList<String>();
     public ArrayList<String> isMedusa = new ArrayList<String>();
     public ArrayList<String> superJumper = new ArrayList<String>();
@@ -166,12 +167,6 @@ public class godPowers extends JavaPlugin {
             System.out.println(error + "vulcan.");
         }
         try {
-            getCommand("myballsareonfire").setExecutor(new VulcanCommand(this));
-            list.put("myballsareonfire", "- See vulcan.");
-        } catch (Exception e) {
-            System.out.println(error + "vulcan.");
-        }
-        try {
             getCommand("demigod").setExecutor(new DemiGodCommand(this));
             list.put("demigod", "- Allows you to take a small fraction of the damage you'd normally take.");
         } catch (Exception e) {
@@ -212,6 +207,12 @@ public class godPowers extends JavaPlugin {
             list.put("medusa", "- Become cursed by the gods, and turn anyone you look at to stone.");
         } catch (Exception e) {
             System.out.println(error + "medusa.");
+        }
+        try {
+            getCommand("hermes").setExecutor(new hermesCommand(this));
+            list.put("hermes", "- Gives you the speed and ability to send letters.");
+        } catch (Exception e) {
+            System.out.println(error + "hermes. ");
         }
         try {
             getCommand("poseidon").setExecutor(new poseidonCommand(this));

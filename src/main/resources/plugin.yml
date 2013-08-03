@@ -1,6 +1,6 @@
 name: godPowers
 main: com.hydrasmp.godPowers.godPowers
-version: 2.9.1
+version: 3.1
 author: Hydra SMP
 commands:
     godmode:
@@ -75,6 +75,9 @@ commands:
     poseidon:
         description: Gives you poseidon like powers while in water
         usage: /poseidon
+    hermes:
+        description: Gives you the powers of heremes
+        usage: /hermes
 permissions:
     godpowers.*:
         description: Gives access to all godpowers commands.
@@ -100,6 +103,7 @@ permissions:
             godpowers.dupe: true
             godpowers.medusa: true
             godpowers.poseidon: true
+            godpowers.hermes: true
     godpowers.godmodeonlogin:
         description: Allows godmode upon login.
         default: op
@@ -160,5 +164,7 @@ permissions:
     godpowers.poseidon:
         description: Gives permission to relevant command.
         default: op
-    
-       
+    godpowers.hermes:
+        description: Gives permission to relevant command.
+        default: op
+
