@@ -296,30 +296,35 @@ public class godPowers extends JavaPlugin {
         for (ItemStack i : p.getInventory().getContents()) {
             if (i != null) {
                 switch (i.getTypeId()) {
+                    // Iron Shovel
                     case 256:
                         i.addEnchantment(Enchantment.DIG_SPEED, 5);
                         i.addEnchantment(Enchantment.DURABILITY, 3);
                         i.addEnchantment(Enchantment.SILK_TOUCH, 1);
                         i.addEnchantment(Enchantment.LOOT_BONUS_BLOCKS, 3);
                         break;
+                    // Iron Pickaxe
                     case 257:
                         i.addEnchantment(Enchantment.DIG_SPEED, 5);
                         i.addEnchantment(Enchantment.DURABILITY, 3);
                         i.addEnchantment(Enchantment.SILK_TOUCH, 1);
                         i.addEnchantment(Enchantment.LOOT_BONUS_BLOCKS, 3);
                         break;
+                    // Iron Axe
                     case 258:
                         i.addEnchantment(Enchantment.DIG_SPEED, 5);
                         i.addEnchantment(Enchantment.DURABILITY, 3);
                         i.addEnchantment(Enchantment.SILK_TOUCH, 1);
                         i.addEnchantment(Enchantment.LOOT_BONUS_BLOCKS, 3);
                         break;
+                    // Bow
                     case 261:
                         i.addEnchantment(Enchantment.ARROW_DAMAGE, 5);
                         i.addEnchantment(Enchantment.ARROW_FIRE, 1);
                         i.addEnchantment(Enchantment.ARROW_KNOCKBACK, 2);
                         i.addEnchantment(Enchantment.ARROW_INFINITE, 1);
                         break;
+                    // Iron Sword
                     case 267:
                         i.addEnchantment(Enchantment.DAMAGE_ALL, 5);
                         i.addEnchantment(Enchantment.DAMAGE_ARTHROPODS, 5);
@@ -328,6 +333,7 @@ public class godPowers extends JavaPlugin {
                         i.addEnchantment(Enchantment.KNOCKBACK, 2);
                         i.addEnchantment(Enchantment.LOOT_BONUS_MOBS, 3);
                         break;
+                    // Wooden Sword
                     case 268:
                         i.addEnchantment(Enchantment.DAMAGE_ALL, 5);
                         i.addEnchantment(Enchantment.DAMAGE_ARTHROPODS, 5);
@@ -336,24 +342,28 @@ public class godPowers extends JavaPlugin {
                         i.addEnchantment(Enchantment.KNOCKBACK, 2);
                         i.addEnchantment(Enchantment.LOOT_BONUS_MOBS, 3);
                         break;
+                    // Wooden Shovel
                     case 269:
                         i.addEnchantment(Enchantment.DIG_SPEED, 5);
                         i.addEnchantment(Enchantment.DURABILITY, 3);
                         i.addEnchantment(Enchantment.SILK_TOUCH, 1);
                         i.addEnchantment(Enchantment.LOOT_BONUS_BLOCKS, 3);
                         break;
+                    // Wooden Pickaxe
                     case 270:
                         i.addEnchantment(Enchantment.DIG_SPEED, 5);
                         i.addEnchantment(Enchantment.DURABILITY, 3);
                         i.addEnchantment(Enchantment.SILK_TOUCH, 1);
                         i.addEnchantment(Enchantment.LOOT_BONUS_BLOCKS, 3);
                         break;
+                    // Wooden Axe
                     case 271:
                         i.addEnchantment(Enchantment.DIG_SPEED, 5);
                         i.addEnchantment(Enchantment.DURABILITY, 3);
                         i.addEnchantment(Enchantment.SILK_TOUCH, 1);
                         i.addEnchantment(Enchantment.LOOT_BONUS_BLOCKS, 3);
                         break;
+                    // Stone Sword
                     case 272:
                         i.addEnchantment(Enchantment.DAMAGE_ALL, 5);
                         i.addEnchantment(Enchantment.DAMAGE_ARTHROPODS, 5);
@@ -362,24 +372,28 @@ public class godPowers extends JavaPlugin {
                         i.addEnchantment(Enchantment.KNOCKBACK, 2);
                         i.addEnchantment(Enchantment.LOOT_BONUS_MOBS, 3);
                         break;
+                    // Stone Shovel
                     case 273:
                         i.addEnchantment(Enchantment.DIG_SPEED, 5);
                         i.addEnchantment(Enchantment.DURABILITY, 3);
                         i.addEnchantment(Enchantment.SILK_TOUCH, 1);
                         i.addEnchantment(Enchantment.LOOT_BONUS_BLOCKS, 3);
                         break;
+                    // Stone Pickaxe
                     case 274:
                         i.addEnchantment(Enchantment.DIG_SPEED, 5);
                         i.addEnchantment(Enchantment.DURABILITY, 3);
                         i.addEnchantment(Enchantment.SILK_TOUCH, 1);
                         i.addEnchantment(Enchantment.LOOT_BONUS_BLOCKS, 3);
                         break;
+                    // Stone Axe
                     case 275:
                         i.addEnchantment(Enchantment.DIG_SPEED, 5);
                         i.addEnchantment(Enchantment.DURABILITY, 3);
                         i.addEnchantment(Enchantment.SILK_TOUCH, 1);
                         i.addEnchantment(Enchantment.LOOT_BONUS_BLOCKS, 3);
                         break;
+                    // Diamond Sword
                     case 276:
                         i.addEnchantment(Enchantment.DAMAGE_ALL, 5);
                         i.addEnchantment(Enchantment.DAMAGE_ARTHROPODS, 5);
@@ -388,24 +402,28 @@ public class godPowers extends JavaPlugin {
                         i.addEnchantment(Enchantment.KNOCKBACK, 2);
                         i.addEnchantment(Enchantment.LOOT_BONUS_MOBS, 3);
                         break;
+                    // Diamond Shovel
                     case 277:
                         i.addEnchantment(Enchantment.DIG_SPEED, 5);
                         i.addEnchantment(Enchantment.DURABILITY, 3);
                         i.addEnchantment(Enchantment.SILK_TOUCH, 1);
                         i.addEnchantment(Enchantment.LOOT_BONUS_BLOCKS, 3);
                         break;
+                    // Diamond Pickaxe
                     case 278:
                         i.addEnchantment(Enchantment.DIG_SPEED, 5);
                         i.addEnchantment(Enchantment.DURABILITY, 3);
                         i.addEnchantment(Enchantment.SILK_TOUCH, 1);
                         i.addEnchantment(Enchantment.LOOT_BONUS_BLOCKS, 3);
                         break;
+                    // Diamond Axe
                     case 279:
                         i.addEnchantment(Enchantment.DIG_SPEED, 5);
                         i.addEnchantment(Enchantment.DURABILITY, 3);
                         i.addEnchantment(Enchantment.SILK_TOUCH, 1);
                         i.addEnchantment(Enchantment.LOOT_BONUS_BLOCKS, 3);
                         break;
+                    // Gold Sword
                     case 283:
                         i.addEnchantment(Enchantment.DAMAGE_ALL, 5);
                         i.addEnchantment(Enchantment.DAMAGE_ARTHROPODS, 5);
@@ -414,24 +432,28 @@ public class godPowers extends JavaPlugin {
                         i.addEnchantment(Enchantment.KNOCKBACK, 2);
                         i.addEnchantment(Enchantment.LOOT_BONUS_MOBS, 3);
                         break;
+                    // Gold Shovel
                     case 284:
                         i.addEnchantment(Enchantment.DIG_SPEED, 5);
                         i.addEnchantment(Enchantment.DURABILITY, 3);
                         i.addEnchantment(Enchantment.SILK_TOUCH, 1);
                         i.addEnchantment(Enchantment.LOOT_BONUS_BLOCKS, 3);
                         break;
+                    // Gold Pickaxe
                     case 285:
                         i.addEnchantment(Enchantment.DIG_SPEED, 5);
                         i.addEnchantment(Enchantment.DURABILITY, 3);
                         i.addEnchantment(Enchantment.SILK_TOUCH, 1);
                         i.addEnchantment(Enchantment.LOOT_BONUS_BLOCKS, 3);
                         break;
+                    // Gold Axe
                     case 286:
                         i.addEnchantment(Enchantment.DIG_SPEED, 5);
                         i.addEnchantment(Enchantment.DURABILITY, 3);
                         i.addEnchantment(Enchantment.SILK_TOUCH, 1);
                         i.addEnchantment(Enchantment.LOOT_BONUS_BLOCKS, 3);
                         break;
+                    // Leather Helmet
                     case 298:
                         i.addEnchantment(Enchantment.PROTECTION_ENVIRONMENTAL, 4);
                         i.addEnchantment(Enchantment.PROTECTION_EXPLOSIONS, 4);
@@ -441,6 +463,7 @@ public class godPowers extends JavaPlugin {
                         i.addEnchantment(Enchantment.WATER_WORKER, 1);
                         i.addEnchantment(Enchantment.THORNS, 3);
                         break;
+                    // Leather Chestplate
                     case 299:
                         i.addEnchantment(Enchantment.PROTECTION_ENVIRONMENTAL, 4);
                         i.addEnchantment(Enchantment.PROTECTION_EXPLOSIONS, 4);
@@ -448,6 +471,7 @@ public class godPowers extends JavaPlugin {
                         i.addEnchantment(Enchantment.PROTECTION_PROJECTILE, 4);
                         i.addEnchantment(Enchantment.THORNS, 3);
                         break;
+                    // Leather Leggings
                     case 300:
                         i.addEnchantment(Enchantment.PROTECTION_ENVIRONMENTAL, 4);
                         i.addEnchantment(Enchantment.PROTECTION_EXPLOSIONS, 4);
@@ -455,6 +479,7 @@ public class godPowers extends JavaPlugin {
                         i.addEnchantment(Enchantment.PROTECTION_PROJECTILE, 4);
                         i.addEnchantment(Enchantment.THORNS, 3);
                         break;
+                    // Leather Boots
                     case 301:
                         i.addEnchantment(Enchantment.PROTECTION_ENVIRONMENTAL, 4);
                         i.addEnchantment(Enchantment.PROTECTION_EXPLOSIONS, 4);
@@ -463,6 +488,7 @@ public class godPowers extends JavaPlugin {
                         i.addEnchantment(Enchantment.PROTECTION_FALL, 4);
                         i.addEnchantment(Enchantment.THORNS, 3);
                         break;
+                    // Chainmail Helmet
                     case 302:
                         i.addEnchantment(Enchantment.PROTECTION_ENVIRONMENTAL, 4);
                         i.addEnchantment(Enchantment.PROTECTION_EXPLOSIONS, 4);
@@ -472,6 +498,7 @@ public class godPowers extends JavaPlugin {
                         i.addEnchantment(Enchantment.WATER_WORKER, 1);
                         i.addEnchantment(Enchantment.THORNS, 3);
                         break;
+                    // Chainmail Chestplate
                     case 303:
                         i.addEnchantment(Enchantment.PROTECTION_ENVIRONMENTAL, 4);
                         i.addEnchantment(Enchantment.PROTECTION_EXPLOSIONS, 4);
@@ -479,6 +506,7 @@ public class godPowers extends JavaPlugin {
                         i.addEnchantment(Enchantment.PROTECTION_PROJECTILE, 4);
                         i.addEnchantment(Enchantment.THORNS, 3);
                         break;
+                    // Chainmail Leggings
                     case 304:
                         i.addEnchantment(Enchantment.PROTECTION_ENVIRONMENTAL, 4);
                         i.addEnchantment(Enchantment.PROTECTION_EXPLOSIONS, 4);
@@ -486,6 +514,7 @@ public class godPowers extends JavaPlugin {
                         i.addEnchantment(Enchantment.PROTECTION_PROJECTILE, 4);
                         i.addEnchantment(Enchantment.THORNS, 3);
                         break;
+                    // Chainmail Leggings
                     case 305:
                         i.addEnchantment(Enchantment.PROTECTION_ENVIRONMENTAL, 4);
                         i.addEnchantment(Enchantment.PROTECTION_EXPLOSIONS, 4);
@@ -494,6 +523,7 @@ public class godPowers extends JavaPlugin {
                         i.addEnchantment(Enchantment.PROTECTION_FALL, 4);
                         i.addEnchantment(Enchantment.THORNS, 3);
                         break;
+                    // Iron Helmet
                     case 306:
                         i.addEnchantment(Enchantment.PROTECTION_ENVIRONMENTAL, 4);
                         i.addEnchantment(Enchantment.PROTECTION_EXPLOSIONS, 4);
@@ -503,6 +533,7 @@ public class godPowers extends JavaPlugin {
                         i.addEnchantment(Enchantment.WATER_WORKER, 1);
                         i.addEnchantment(Enchantment.THORNS, 3);
                         break;
+                    // Iron Chestplate
                     case 307:
                         i.addEnchantment(Enchantment.PROTECTION_ENVIRONMENTAL, 4);
                         i.addEnchantment(Enchantment.PROTECTION_EXPLOSIONS, 4);
@@ -510,6 +541,7 @@ public class godPowers extends JavaPlugin {
                         i.addEnchantment(Enchantment.PROTECTION_PROJECTILE, 4);
                         i.addEnchantment(Enchantment.THORNS, 3);
                         break;
+                    // Iron Leggings
                     case 308:
                         i.addEnchantment(Enchantment.PROTECTION_ENVIRONMENTAL, 4);
                         i.addEnchantment(Enchantment.PROTECTION_EXPLOSIONS, 4);
@@ -517,6 +549,7 @@ public class godPowers extends JavaPlugin {
                         i.addEnchantment(Enchantment.PROTECTION_PROJECTILE, 4);
                         i.addEnchantment(Enchantment.THORNS, 3);
                         break;
+                    // Iron Boots
                     case 309:
                         i.addEnchantment(Enchantment.PROTECTION_ENVIRONMENTAL, 4);
                         i.addEnchantment(Enchantment.PROTECTION_EXPLOSIONS, 4);
@@ -525,6 +558,7 @@ public class godPowers extends JavaPlugin {
                         i.addEnchantment(Enchantment.PROTECTION_FALL, 4);
                         i.addEnchantment(Enchantment.THORNS, 3);
                         break;
+                    // Diamond Helmet
                     case 310:
                         i.addEnchantment(Enchantment.PROTECTION_ENVIRONMENTAL, 4);
                         i.addEnchantment(Enchantment.PROTECTION_EXPLOSIONS, 4);
@@ -534,6 +568,7 @@ public class godPowers extends JavaPlugin {
                         i.addEnchantment(Enchantment.WATER_WORKER, 1);
                         i.addEnchantment(Enchantment.THORNS, 3);
                         break;
+                    // Diamond Chestplate
                     case 311:
                         i.addEnchantment(Enchantment.PROTECTION_ENVIRONMENTAL, 4);
                         i.addEnchantment(Enchantment.PROTECTION_EXPLOSIONS, 4);
@@ -541,6 +576,7 @@ public class godPowers extends JavaPlugin {
                         i.addEnchantment(Enchantment.PROTECTION_PROJECTILE, 4);
                         i.addEnchantment(Enchantment.THORNS, 3);
                         break;
+                    // Diamond Leggings
                     case 312:
                         i.addEnchantment(Enchantment.PROTECTION_ENVIRONMENTAL, 4);
                         i.addEnchantment(Enchantment.PROTECTION_EXPLOSIONS, 4);
@@ -548,6 +584,7 @@ public class godPowers extends JavaPlugin {
                         i.addEnchantment(Enchantment.PROTECTION_PROJECTILE, 4);
                         i.addEnchantment(Enchantment.THORNS, 3);
                         break;
+                    // Diamond Boots
                     case 313:
                         i.addEnchantment(Enchantment.PROTECTION_ENVIRONMENTAL, 4);
                         i.addEnchantment(Enchantment.PROTECTION_EXPLOSIONS, 4);
@@ -556,6 +593,7 @@ public class godPowers extends JavaPlugin {
                         i.addEnchantment(Enchantment.PROTECTION_FALL, 4);
                         i.addEnchantment(Enchantment.THORNS, 3);
                         break;
+                    // Gold Helmet
                     case 314:
                         i.addEnchantment(Enchantment.PROTECTION_ENVIRONMENTAL, 4);
                         i.addEnchantment(Enchantment.PROTECTION_EXPLOSIONS, 4);
@@ -565,6 +603,7 @@ public class godPowers extends JavaPlugin {
                         i.addEnchantment(Enchantment.WATER_WORKER, 1);
                         i.addEnchantment(Enchantment.THORNS, 3);
                         break;
+                    // Gold Chestplate
                     case 315:
                         i.addEnchantment(Enchantment.PROTECTION_ENVIRONMENTAL, 4);
                         i.addEnchantment(Enchantment.PROTECTION_EXPLOSIONS, 4);
@@ -572,6 +611,7 @@ public class godPowers extends JavaPlugin {
                         i.addEnchantment(Enchantment.PROTECTION_PROJECTILE, 4);
                         i.addEnchantment(Enchantment.THORNS, 3);
                         break;
+                    // Gold Leggings
                     case 316:
                         i.addEnchantment(Enchantment.PROTECTION_ENVIRONMENTAL, 4);
                         i.addEnchantment(Enchantment.PROTECTION_EXPLOSIONS, 4);
@@ -579,6 +619,7 @@ public class godPowers extends JavaPlugin {
                         i.addEnchantment(Enchantment.PROTECTION_PROJECTILE, 4);
                         i.addEnchantment(Enchantment.THORNS, 3);
                         break;
+                    // Gold Boots
                     case 317:
                         i.addEnchantment(Enchantment.PROTECTION_ENVIRONMENTAL, 4);
                         i.addEnchantment(Enchantment.PROTECTION_EXPLOSIONS, 4);
@@ -593,6 +634,7 @@ public class godPowers extends JavaPlugin {
         for (ItemStack i : p.getInventory().getArmorContents()) {
             if (i != null) {
                 switch (i.getTypeId()) {
+                    // Leather Helmet
                     case 298:
                         i.addEnchantment(Enchantment.PROTECTION_ENVIRONMENTAL, 4);
                         i.addEnchantment(Enchantment.PROTECTION_EXPLOSIONS, 4);
@@ -602,6 +644,7 @@ public class godPowers extends JavaPlugin {
                         i.addEnchantment(Enchantment.WATER_WORKER, 1);
                         i.addEnchantment(Enchantment.THORNS, 3);
                         break;
+                    // Leather Chestplate
                     case 299:
                         i.addEnchantment(Enchantment.PROTECTION_ENVIRONMENTAL, 4);
                         i.addEnchantment(Enchantment.PROTECTION_EXPLOSIONS, 4);
@@ -609,6 +652,7 @@ public class godPowers extends JavaPlugin {
                         i.addEnchantment(Enchantment.PROTECTION_PROJECTILE, 4);
                         i.addEnchantment(Enchantment.THORNS, 3);
                         break;
+                    // Leather Leggings
                     case 300:
                         i.addEnchantment(Enchantment.PROTECTION_ENVIRONMENTAL, 4);
                         i.addEnchantment(Enchantment.PROTECTION_EXPLOSIONS, 4);
@@ -616,6 +660,7 @@ public class godPowers extends JavaPlugin {
                         i.addEnchantment(Enchantment.PROTECTION_PROJECTILE, 4);
                         i.addEnchantment(Enchantment.THORNS, 3);
                         break;
+                    // Leather Boots
                     case 301:
                         i.addEnchantment(Enchantment.PROTECTION_ENVIRONMENTAL, 4);
                         i.addEnchantment(Enchantment.PROTECTION_EXPLOSIONS, 4);
@@ -624,6 +669,7 @@ public class godPowers extends JavaPlugin {
                         i.addEnchantment(Enchantment.PROTECTION_FALL, 4);
                         i.addEnchantment(Enchantment.THORNS, 3);
                         break;
+                    // Chainmail Helmet
                     case 302:
                         i.addEnchantment(Enchantment.PROTECTION_ENVIRONMENTAL, 4);
                         i.addEnchantment(Enchantment.PROTECTION_EXPLOSIONS, 4);
@@ -633,6 +679,7 @@ public class godPowers extends JavaPlugin {
                         i.addEnchantment(Enchantment.WATER_WORKER, 1);
                         i.addEnchantment(Enchantment.THORNS, 3);
                         break;
+                    // Chainmail Chestplate
                     case 303:
                         i.addEnchantment(Enchantment.PROTECTION_ENVIRONMENTAL, 4);
                         i.addEnchantment(Enchantment.PROTECTION_EXPLOSIONS, 4);
@@ -640,6 +687,7 @@ public class godPowers extends JavaPlugin {
                         i.addEnchantment(Enchantment.PROTECTION_PROJECTILE, 4);
                         i.addEnchantment(Enchantment.THORNS, 3);
                         break;
+                    // Chainmail Leggings
                     case 304:
                         i.addEnchantment(Enchantment.PROTECTION_ENVIRONMENTAL, 4);
                         i.addEnchantment(Enchantment.PROTECTION_EXPLOSIONS, 4);
@@ -647,6 +695,7 @@ public class godPowers extends JavaPlugin {
                         i.addEnchantment(Enchantment.PROTECTION_PROJECTILE, 4);
                         i.addEnchantment(Enchantment.THORNS, 3);
                         break;
+                    // Chainmail Boots
                     case 305:
                         i.addEnchantment(Enchantment.PROTECTION_ENVIRONMENTAL, 4);
                         i.addEnchantment(Enchantment.PROTECTION_EXPLOSIONS, 4);
@@ -655,6 +704,7 @@ public class godPowers extends JavaPlugin {
                         i.addEnchantment(Enchantment.PROTECTION_FALL, 4);
                         i.addEnchantment(Enchantment.THORNS, 3);
                         break;
+                    // Iron Helmet
                     case 306:
                         i.addEnchantment(Enchantment.PROTECTION_ENVIRONMENTAL, 4);
                         i.addEnchantment(Enchantment.PROTECTION_EXPLOSIONS, 4);
@@ -664,6 +714,7 @@ public class godPowers extends JavaPlugin {
                         i.addEnchantment(Enchantment.WATER_WORKER, 1);
                         i.addEnchantment(Enchantment.THORNS, 3);
                         break;
+                    // Iron Chestplate
                     case 307:
                         i.addEnchantment(Enchantment.PROTECTION_ENVIRONMENTAL, 4);
                         i.addEnchantment(Enchantment.PROTECTION_EXPLOSIONS, 4);
@@ -671,6 +722,7 @@ public class godPowers extends JavaPlugin {
                         i.addEnchantment(Enchantment.PROTECTION_PROJECTILE, 4);
                         i.addEnchantment(Enchantment.THORNS, 3);
                         break;
+                    // Iron Leggings
                     case 308:
                         i.addEnchantment(Enchantment.PROTECTION_ENVIRONMENTAL, 4);
                         i.addEnchantment(Enchantment.PROTECTION_EXPLOSIONS, 4);
@@ -678,6 +730,7 @@ public class godPowers extends JavaPlugin {
                         i.addEnchantment(Enchantment.PROTECTION_PROJECTILE, 4);
                         i.addEnchantment(Enchantment.THORNS, 3);
                         break;
+                    // Iron Boots
                     case 309:
                         i.addEnchantment(Enchantment.PROTECTION_ENVIRONMENTAL, 4);
                         i.addEnchantment(Enchantment.PROTECTION_EXPLOSIONS, 4);
@@ -686,6 +739,7 @@ public class godPowers extends JavaPlugin {
                         i.addEnchantment(Enchantment.PROTECTION_FALL, 4);
                         i.addEnchantment(Enchantment.THORNS, 3);
                         break;
+                    // Diamond Helmet
                     case 310:
                         i.addEnchantment(Enchantment.PROTECTION_ENVIRONMENTAL, 4);
                         i.addEnchantment(Enchantment.PROTECTION_EXPLOSIONS, 4);
@@ -695,6 +749,7 @@ public class godPowers extends JavaPlugin {
                         i.addEnchantment(Enchantment.WATER_WORKER, 1);
                         i.addEnchantment(Enchantment.THORNS, 3);
                         break;
+                    // Diamond Chestplate
                     case 311:
                         i.addEnchantment(Enchantment.PROTECTION_ENVIRONMENTAL, 4);
                         i.addEnchantment(Enchantment.PROTECTION_EXPLOSIONS, 4);
@@ -702,6 +757,7 @@ public class godPowers extends JavaPlugin {
                         i.addEnchantment(Enchantment.PROTECTION_PROJECTILE, 4);
                         i.addEnchantment(Enchantment.THORNS, 3);
                         break;
+                    // Diamond Leggings
                     case 312:
                         i.addEnchantment(Enchantment.PROTECTION_ENVIRONMENTAL, 4);
                         i.addEnchantment(Enchantment.PROTECTION_EXPLOSIONS, 4);
@@ -709,6 +765,7 @@ public class godPowers extends JavaPlugin {
                         i.addEnchantment(Enchantment.PROTECTION_PROJECTILE, 4);
                         i.addEnchantment(Enchantment.THORNS, 3);
                         break;
+                    // Diamond Boots
                     case 313:
                         i.addEnchantment(Enchantment.PROTECTION_ENVIRONMENTAL, 4);
                         i.addEnchantment(Enchantment.PROTECTION_EXPLOSIONS, 4);
@@ -717,6 +774,7 @@ public class godPowers extends JavaPlugin {
                         i.addEnchantment(Enchantment.PROTECTION_FALL, 4);
                         i.addEnchantment(Enchantment.THORNS, 3);
                         break;
+                    // Gold Helmet
                     case 314:
                         i.addEnchantment(Enchantment.PROTECTION_ENVIRONMENTAL, 4);
                         i.addEnchantment(Enchantment.PROTECTION_EXPLOSIONS, 4);
@@ -726,6 +784,7 @@ public class godPowers extends JavaPlugin {
                         i.addEnchantment(Enchantment.WATER_WORKER, 1);
                         i.addEnchantment(Enchantment.THORNS, 3);
                         break;
+                    // Gold Chestplate
                     case 315:
                         i.addEnchantment(Enchantment.PROTECTION_ENVIRONMENTAL, 4);
                         i.addEnchantment(Enchantment.PROTECTION_EXPLOSIONS, 4);
@@ -733,6 +792,7 @@ public class godPowers extends JavaPlugin {
                         i.addEnchantment(Enchantment.PROTECTION_PROJECTILE, 4);
                         i.addEnchantment(Enchantment.THORNS, 3);
                         break;
+                    // Gold Leggings
                     case 316:
                         i.addEnchantment(Enchantment.PROTECTION_ENVIRONMENTAL, 4);
                         i.addEnchantment(Enchantment.PROTECTION_EXPLOSIONS, 4);
@@ -740,6 +800,7 @@ public class godPowers extends JavaPlugin {
                         i.addEnchantment(Enchantment.PROTECTION_PROJECTILE, 4);
                         i.addEnchantment(Enchantment.THORNS, 3);
                         break;
+                    // Gold Boots
                     case 317:
                         i.addEnchantment(Enchantment.PROTECTION_ENVIRONMENTAL, 4);
                         i.addEnchantment(Enchantment.PROTECTION_EXPLOSIONS, 4);
