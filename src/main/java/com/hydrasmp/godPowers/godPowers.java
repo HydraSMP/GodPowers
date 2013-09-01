@@ -82,6 +82,7 @@ public class godPowers extends JavaPlugin {
     @Override
     public void onEnable() {
         file = this.getFile();
+        loadConfig();
         @SuppressWarnings("unused")
         BukkitTask TaskName = new OnOneSecond(this).runTaskTimer(this, 25, 25);
         String error = "[GodPowers] ERROR another plugin has already taken the command ";
@@ -220,7 +221,6 @@ public class godPowers extends JavaPlugin {
         } catch (Exception e) {
             System.out.println(error + "poseidon.");
         }
-        loadConfig();
         PluginManager pm = getServer().getPluginManager();
         pm.registerEvents(new godPowersEntityListener(this), this);
         pm.registerEvents(new godPowersPlayerListener(this), this);
