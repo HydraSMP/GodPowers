@@ -69,7 +69,8 @@ public class godPowersPlayerListener implements Listener {
                     player.sendMessage("As you enter the world, you feel your godly powers returning.");
                     player.setDisplayName(plugin.title + player.getDisplayName());
                     plugin.godmodeEnabled.add(player.getName());
-                    player.setHealth(20);
+                    player.setHealth(player.getMaxHealth());
+                    player.setFoodLevel(20);
                     player.setDisplayName(plugin.title + player.getName());
                 }
             }, 10L);

@@ -33,7 +33,8 @@ public class godPowersEntityListener implements Listener {
         if (event.getEntity() instanceof Player) {
             Player player = (Player) event.getEntity();
             if (plugin.godmodeEnabled.contains(player.getName())) {
-                player.setHealth(20);
+                player.setHealth(player.getMaxHealth());
+                player.setFoodLevel(20);
                 event.setCancelled(true);
             } else if (plugin.superJumper.contains(player.getName()) && event.getCause() == DamageCause.FALL) {
                 event.setCancelled(true);
