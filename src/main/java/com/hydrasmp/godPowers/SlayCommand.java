@@ -4,6 +4,7 @@ package com.hydrasmp.godPowers;
 
 import org.bukkit.ChatColor;
 import org.bukkit.Location;
+import org.bukkit.Material;
 import org.bukkit.World;
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandExecutor;
@@ -51,9 +52,9 @@ public class SlayCommand implements CommandExecutor {
                     if (split[1].equalsIgnoreCase("a") || split[1].equalsIgnoreCase("arrows")) {
                         int x = -4;
                         Location arrows = new Location(world, targetPlayer.getLocation().getX() + x, targetPlayer.getLocation().getY() + 1, targetPlayer.getLocation().getZ() + x);
-                        while (arrows.getBlock().getTypeId() != 0) {
+                        while (arrows.getBlock().getType() != Material.AIR) {
                             arrows = new Location(world, targetPlayer.getLocation().getX() + x, targetPlayer.getLocation().getY() + 1, targetPlayer.getLocation().getZ() + x);
-                            if (arrows.getBlock().getTypeId() == 0)
+                            if (arrows.getBlock().getType() == Material.AIR)
                                 break;
                             else if (x > 4)
                                 break;

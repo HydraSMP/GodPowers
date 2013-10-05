@@ -49,7 +49,7 @@ public class godPowersPlayerListener implements Listener {
             ItemStack[] item = this.plugin.getServer().getPlayer(player.getName()).getInventory().getContents();
             Location position = new Location(player.getWorld(), player.getLocation().getX(), player.getLocation().getY(), player.getLocation().getZ());
             for (int x = 0; x < 36; x++) {
-                if (item[x].getTypeId() != 0) {
+                if (item[x].getType() != Material.AIR) {
                     player.getWorld().dropItemNaturally(position, item[x]);
                 }
             }
@@ -168,9 +168,9 @@ public class godPowersPlayerListener implements Listener {
                 diffZ = -1;
             }
             Block block = event.getPlayer().getWorld().getBlockAt((int) (event.getFrom().getX() + diffX), (int) event.getFrom().getY(), (int) (event.getFrom().getZ() + diffZ));
-            if (block.getTypeId() == 0) {
+            if (block.getType() == Material.AIR) {
                 event.getPlayer().setFireTicks(0);
-                block.setTypeId(51);
+                block.setType(Material.FIRE);
             }
         }
         if ((plugin.superJumper.contains(event.getPlayer().getName()))) {
@@ -179,7 +179,7 @@ public class godPowersPlayerListener implements Listener {
             if (event.getTo().getY() > event.getFrom().getY()) {
                 block = event.getPlayer().getWorld().getBlockAt(new Location(event.getPlayer().getWorld(), event.getTo().getX(), event.getTo().getY() + 2, event.getTo().getZ()));
                 control = event.getPlayer().getWorld().getBlockAt(new Location(event.getPlayer().getWorld(), event.getTo().getX(), event.getTo().getY() - 2, event.getTo().getZ()));
-                if (!(block.getTypeId() != 0 || control.getTypeId() == 0)) {
+                if (!(block.getType() != Material.AIR || control.getType() == Material.AIR)) {
                     //event.getPlayer().teleportTo(new Location(event.getPlayer().getWorld(), event.getTo().getX()+diffX, event.getTo().getY()+2, event.getTo().getZ()+diffZ));
                     event.getPlayer().setVelocity(dir);
                 }
@@ -195,11 +195,11 @@ public class godPowersPlayerListener implements Listener {
             for (int x = -2; x <= 2; x++) {
                 for (int z = -2; z <= 2; z++) {
                     Block block = event.getPlayer().getWorld().getBlockAt(event.getTo().getBlockX() + x, event.getTo().getBlockY() - 1, event.getTo().getBlockZ() + z);
-                    if (block.getTypeId() == 3) {
-                        block.setTypeId(2);
+                    if (block.getType() == Material.DIRT) {
+                        block.setType(Material.GRASS);
                         block = event.getPlayer().getWorld().getBlockAt(event.getTo().getBlockX() + x, event.getTo().getBlockY(), event.getTo().getBlockZ() + z);
                         plantStuff(block);
-                    } else if (block.getTypeId() == 2) {
+                    } else if (block.getType() == Material.GRASS) {
                         block = event.getPlayer().getWorld().getBlockAt(event.getTo().getBlockX() + x, event.getTo().getBlockY(), event.getTo().getBlockZ() + z);
                         plantStuff(block);
                     }
@@ -210,18 +210,18 @@ public class godPowersPlayerListener implements Listener {
             for (int x = -2; x <= 2; x++) {
                 for (int z = -2; z <= 2; z++) {
                     Block block = event.getPlayer().getWorld().getBlockAt(event.getTo().getBlockX() + x, event.getTo().getBlockY() - 1, event.getTo().getBlockZ() + z);
-                    if (block.getTypeId() != 0 && block.getTypeId() != 8 && block.getTypeId() != 9) {
+                    if (block.getType() != Material.AIR && block.getType() != Material.WATER && block.getType() != Material.STATIONARY_WATER) {
                         double rand = Math.random();
                         if (x == 0 && z == 0) {
                             if (rand < .5)
-                                block.setTypeId(87);
+                                block.setType(Material.NETHERRACK);
                             else
-                                block.setTypeId(88);
+                                block.setType(Material.SOUL_SAND);
                         } else {
                             if (rand < .2)
-                                block.setTypeId(87);
+                                block.setType(Material.NETHERRACK);
                             else if (rand > .2 && rand <= .4)
-                                block.setTypeId(88);
+                                block.setType(Material.SOUL_SAND);
                         }
                     }
                 }
@@ -230,14 +230,14 @@ public class godPowersPlayerListener implements Listener {
     }
 
     private void plantStuff(Block block) {
-        if (block.getTypeId() == 0) {
+        if (block.getType() == Material.AIR) {
             double chance = Math.random();
             if (chance < .02)
-                block.setTypeId(37);
+                block.setType(Material.YELLOW_FLOWER);
             else if (chance >= .02 && chance <= .04)
-                block.setTypeId(38);
+                block.setType(Material.RED_ROSE);
             else if (chance > .04 && chance <= .1) {
-                block.setTypeId(31);
+                block.setType(Material.LONG_GRASS);
                 block.setData((byte) 1);
             }
 
@@ -267,11 +267,11 @@ public class godPowersPlayerListener implements Listener {
                 Block b = event.getClickedBlock();
                 Player p = event.getPlayer();
                 if (i != null) {
-                    if (i.getTypeId() == 284 && plugin.shovelDrops.contains(b.getTypeId())) {
+                    if (i.getType() == Material.GOLD_SPADE && plugin.shovelDrops.contains(b.getTypeId())) {
                         mine(p, b, i);
-                    } else if (i.getTypeId() == 285 && plugin.pickDrops.contains(b.getTypeId())) {
+                    } else if (i.getType() == Material.GOLD_PICKAXE && plugin.pickDrops.contains(b.getTypeId())) {
                         mine(p, b, i);
-                    } else if (i.getTypeId() == 286 && plugin.axeDrops.contains(b.getTypeId())) {
+                    } else if (i.getType() == Material.GOLD_AXE && plugin.axeDrops.contains(b.getTypeId())) {
                         mine(p, b, i);
                     }
                 }

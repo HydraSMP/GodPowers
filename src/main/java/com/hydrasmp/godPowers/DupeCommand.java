@@ -4,6 +4,7 @@ package com.hydrasmp.godPowers;
 //import org.bukkit.World;
 
 import org.bukkit.ChatColor;
+import org.bukkit.Material;
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandExecutor;
 import org.bukkit.command.CommandSender;
@@ -25,7 +26,7 @@ public class DupeCommand implements CommandExecutor {
             if (player.hasPermission("godpowers.dupe")) {
                 if (split.length == 0) {
                     int amount = 64;
-                    if (player.getItemInHand().getTypeId() != 0) {
+                    if (player.getItemInHand().getType() != Material.AIR) {
                         player.sendMessage(ChatColor.BLUE + "The gods have decided to multiply your items.");
                         Inventory inv = player.getInventory();
                         ItemStack item = player.getItemInHand();
@@ -34,13 +35,13 @@ public class DupeCommand implements CommandExecutor {
                         newitem.setItemMeta(item.getItemMeta());
                         newitem.addEnchantments(item.getEnchantments());
                         newitem.setType(item.getType());
-                        newitem.setTypeId(item.getTypeId());
+                        newitem.setType(item.getType());
                         inv.addItem(newitem);
                     } else {
                         player.sendMessage(ChatColor.DARK_RED + "The gods cannot multiply nothing.");
                     }
                 } else if (split.length == 1) {
-                    if (player.getItemInHand().getTypeId() != 0) {
+                    if (player.getItemInHand().getType() != Material.AIR) {
                         player.sendMessage(ChatColor.BLUE + "The gods have decided to multiply your items.");
                         int amount = Integer.parseInt(split[0]);
                         if (amount == 0) {
@@ -53,7 +54,7 @@ public class DupeCommand implements CommandExecutor {
                         newitem.setItemMeta(item.getItemMeta());
                         newitem.addEnchantments(item.getEnchantments());
                         newitem.setType(item.getType());
-                        newitem.setTypeId(item.getTypeId());
+                        newitem.setType(item.getType());
                         inv.addItem(newitem);
                     } else {
                         player.sendMessage(ChatColor.DARK_RED + "The gods cannot multiply nothing.");

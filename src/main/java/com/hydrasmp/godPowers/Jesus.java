@@ -1,5 +1,6 @@
 package com.hydrasmp.godPowers;
 
+import org.bukkit.Material;
 import org.bukkit.block.Block;
 import org.bukkit.entity.Player;
 
@@ -62,18 +63,18 @@ public class Jesus {
         void makeJesusRaft(Player player) {
             for (int i = 0; i < raft.length; i++) {
                 Block block = player.getWorld().getBlockAt(((int) player.getLocation().getX() + raft[i].x), ((int) player.getLocation().getY() + raft[i].y), ((int) player.getLocation().getZ() + raft[i].z));
-                if (block.getTypeId() == 8 || block.getTypeId() == 9) {
+                if (block.getType() == Material.WATER || block.getType() == Material.STATIONARY_WATER) {
                     raftX[i] = (int) player.getLocation().getX() + raft[i].x;
                     raftY[i] = (int) player.getLocation().getY() + raft[i].y;
                     raftZ[i] = (int) player.getLocation().getZ() + raft[i].z;
                     raft[i].made = true;
-                    block.setTypeId(79);
-                } else if (block.getTypeId() == 10 || block.getTypeId() == 11) {
+                    block.setType(Material.ICE);
+                } else if (block.getType() == Material.LAVA || block.getType() == Material.STATIONARY_LAVA) {
                     raftX[i] = (int) player.getLocation().getX() + raft[i].x;
                     raftY[i] = (int) player.getLocation().getY() + raft[i].y;
                     raftZ[i] = (int) player.getLocation().getZ() + raft[i].z;
                     raft[i].made = true;
-                    block.setTypeId(49);
+                    block.setType(Material.OBSIDIAN);
                 } else {
                     raft[i].made = false;
                 }
@@ -83,10 +84,10 @@ public class Jesus {
         void destroyJesusRaft(Player player) {
             for (int i = 0; i < raft.length; i++) {
                 Block block = player.getWorld().getBlockAt(((int) raftX[i]), ((int) raftY[i]), ((int) raftZ[i]));
-                if (block.getTypeId() == 79) {
-                    block.setTypeId(8);
-                } else if (block.getTypeId() == 49) {
-                    block.setTypeId(10);
+                if (block.getType() == Material.ICE) {
+                    block.setType(Material.WATER);
+                } else if (block.getType() == Material.OBSIDIAN) {
+                    block.setType(Material.LAVA);
                 }
                 if (raft[i].made) {
                     raft[i].made = false;
