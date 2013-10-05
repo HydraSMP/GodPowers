@@ -5,6 +5,10 @@
     <version>3.1</version>
     <name>godPowers</name>
     <url>https://github.com/hydrasmp</url>
+    <properties>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
+    </properties>
     <repositories>
         <repository>
             <id>bukkit-repo</id>
