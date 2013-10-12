@@ -6,11 +6,11 @@ import org.bukkit.command.CommandExecutor;
 import org.bukkit.command.CommandSender;
 import org.bukkit.entity.Player;
 
-public class GodPowersCommand implements CommandExecutor {
+public class godPowersCommand implements CommandExecutor {
     private Player player;
     private final godPowers plugin;
 
-    public GodPowersCommand(godPowers instance) {
+    public godPowersCommand(godPowers instance) {
         plugin = instance;
     }
 

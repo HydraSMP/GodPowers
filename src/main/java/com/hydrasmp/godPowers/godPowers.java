@@ -73,7 +73,7 @@ public class godPowers extends JavaPlugin {
             medusaFreezeTime = this.getConfig().getInt("MedusaFreezeTime", 10);
             this.saveConfig();
         } catch (Exception e) {
-            System.out.println("[GodPowers] Error loading config file.");
+            System.out.println("[godPowers] Error loading config file.");
 
         }
     }
@@ -87,7 +87,7 @@ public class godPowers extends JavaPlugin {
         loadConfig();
         @SuppressWarnings("unused")
         BukkitTask TaskName = new OnOneSecond(this).runTaskTimer(this, 25, 25);
-        String error = "[GodPowers] ERROR another plugin has already taken the command ";
+        String error = "[godPowers] ERROR another plugin has already taken the command ";
         try {
             getCommand("zeus").setExecutor(new ZeusCommand(this));
             list.put("zeus", "- Strike lightning with a swing of your arm!");
@@ -158,7 +158,7 @@ public class godPowers extends JavaPlugin {
             System.out.println(error + "heal.");
         }
         try {
-            getCommand("godpowers").setExecutor(new GodPowersCommand(this));
+            getCommand("godpowers").setExecutor(new godPowersCommand(this));
             list.put("godpowers", "- Displays this message.");
         } catch (Exception e) {
             System.out.println(error + "godpowers. How dare they!");
