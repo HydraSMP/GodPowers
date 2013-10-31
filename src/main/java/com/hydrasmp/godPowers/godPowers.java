@@ -8,7 +8,6 @@ import org.bukkit.enchantments.Enchantment;
 import org.bukkit.entity.Arrow;
 import org.bukkit.entity.Entity;
 import org.bukkit.entity.Player;
-import org.bukkit.event.player.PlayerLoginEvent;
 import org.bukkit.inventory.ItemStack;
 import org.bukkit.plugin.PluginDescriptionFile;
 import org.bukkit.plugin.PluginManager;
@@ -43,9 +42,9 @@ public class godPowers extends JavaPlugin {
     public ArrayList<String> isVulcan = new ArrayList<String>();
     public ArrayList<String> DemiGod = new ArrayList<String>();
     public ArrayList<String> hades = new ArrayList<String>();
-    public ArrayList<Integer> shovelDrops = new ArrayList<Integer>();
-    public ArrayList<Integer> pickDrops = new ArrayList<Integer>();
-    public ArrayList<Integer> axeDrops = new ArrayList<Integer>();
+    public ArrayList<Material> shovelDrops = new ArrayList<Material>();
+    public ArrayList<Material> pickDrops = new ArrayList<Material>();
+    public ArrayList<Material> axeDrops = new ArrayList<Material>();
     public HashMap<String, String> list = new HashMap<String, String>();
     public double DemiModifier = 0;
     public boolean godModeOnLogin = true;
@@ -73,6 +72,7 @@ public class godPowers extends JavaPlugin {
             medusaFreezeTime = this.getConfig().getInt("MedusaFreezeTime", 10);
             this.saveConfig();
         } catch (Exception e) {
+            e.printStackTrace();
             System.out.println("[godPowers] Error loading config file.");
 
         }
@@ -232,30 +232,30 @@ public class godPowers extends JavaPlugin {
     }
 
     public void populateLists() {
-        shovelDrops.add(2);
-        shovelDrops.add(3);
-        shovelDrops.add(12);
-        shovelDrops.add(13);
-        shovelDrops.add(82);
-        pickDrops.add(1);
-        pickDrops.add(4);
-        pickDrops.add(14);
-        pickDrops.add(15);
-        pickDrops.add(16);
-        pickDrops.add(21);
-        pickDrops.add(22);
-        pickDrops.add(24);
-        pickDrops.add(41);
-        pickDrops.add(42);
-        pickDrops.add(43);
-        pickDrops.add(44);
-        pickDrops.add(45);
-        pickDrops.add(48);
-        pickDrops.add(49);
-        pickDrops.add(56);
-        pickDrops.add(57);
-        axeDrops.add(5);
-        axeDrops.add(17);
+        shovelDrops.add(Material.GRASS);
+        shovelDrops.add(Material.DIRT);
+        shovelDrops.add(Material.SAND);
+        shovelDrops.add(Material.GRAVEL);
+        shovelDrops.add(Material.CLAY);
+        pickDrops.add(Material.STONE);
+        pickDrops.add(Material.COBBLESTONE);
+        pickDrops.add(Material.GOLD_ORE);
+        pickDrops.add(Material.IRON_ORE);
+        pickDrops.add(Material.COAL_ORE);
+        pickDrops.add(Material.LAPIS_ORE);
+        pickDrops.add(Material.LAPIS_BLOCK);
+        pickDrops.add(Material.SANDSTONE);
+        pickDrops.add(Material.GOLD_BLOCK);
+        pickDrops.add(Material.IRON_BLOCK);
+        pickDrops.add(Material.DOUBLE_STEP);
+        pickDrops.add(Material.STEP);
+        pickDrops.add(Material.BRICK);
+        pickDrops.add(Material.MOSSY_COBBLESTONE);
+        pickDrops.add(Material.OBSIDIAN);
+        pickDrops.add(Material.DIAMOND_ORE);
+        pickDrops.add(Material.DIAMOND_BLOCK);
+        axeDrops.add(Material.WOOD);
+        axeDrops.add(Material.LOG);
 
     }
 
@@ -281,10 +281,6 @@ public class godPowers extends JavaPlugin {
                 }
             }
         }
-    }
-
-    public void recordEvent(PlayerLoginEvent event) {
-
     }
 
     public void arrowSlay(Location arrows, World world, Player player) {

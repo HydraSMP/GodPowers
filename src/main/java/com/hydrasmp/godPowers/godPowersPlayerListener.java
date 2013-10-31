@@ -1,13 +1,7 @@
 package com.hydrasmp.godPowers;
 
 import com.hydrasmp.godPowers.Jesus.Raft;
-
-import org.bukkit.Bukkit;
-import org.bukkit.ChatColor;
-import org.bukkit.Effect;
-import org.bukkit.Location;
-import org.bukkit.Material;
-import org.bukkit.World;
+import org.bukkit.*;
 import org.bukkit.block.Block;
 import org.bukkit.entity.Entity;
 import org.bukkit.entity.Fireball;
@@ -16,12 +10,7 @@ import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;
 import org.bukkit.event.block.Action;
 import org.bukkit.event.block.BlockBreakEvent;
-import org.bukkit.event.player.PlayerAnimationEvent;
-import org.bukkit.event.player.PlayerAnimationType;
-import org.bukkit.event.player.PlayerInteractEvent;
-import org.bukkit.event.player.PlayerJoinEvent;
-import org.bukkit.event.player.PlayerMoveEvent;
-import org.bukkit.event.player.PlayerQuitEvent;
+import org.bukkit.event.player.*;
 import org.bukkit.inventory.ItemStack;
 import org.bukkit.potion.PotionEffect;
 import org.bukkit.potion.PotionEffectType;
@@ -92,7 +81,7 @@ public class godPowersPlayerListener implements Listener {
     @EventHandler
     public void onPlayerMove(PlayerMoveEvent event) {
         /*
-    	if(event.getFrom().getBlock() != event.getTo().getBlock())
+        if(event.getFrom().getBlock() != event.getTo().getBlock())
     	{
     		event.getFrom().getBlock().getRelative(0,-1,0).setTypeId(plugin.lastID);
     		event.getFrom().getBlock().getRelative(0,-1,0).setData((byte) plugin.lastData);
@@ -101,8 +90,8 @@ public class godPowersPlayerListener implements Listener {
     		event.getTo().getBlock().getRelative(0,-1,0).setTypeId(89);
     	}
     	*/
-        if(plugin.isHermes.contains(event.getPlayer().getName())){
-                event.getPlayer().addPotionEffect(new PotionEffect(PotionEffectType.SPEED,120,6));
+        if (plugin.isHermes.contains(event.getPlayer().getName())) {
+            event.getPlayer().addPotionEffect(new PotionEffect(PotionEffectType.SPEED, 120, 6));
         }
         if (plugin.isPoseidon.contains(event.getPlayer().getName())) {
             Material m = event.getPlayer().getLocation().getBlock().getType();
@@ -250,7 +239,7 @@ public class godPowersPlayerListener implements Listener {
             Player p = event.getPlayer();
             World w = p.getWorld();
             if (plugin.isZeus.contains(p.getName())) {
-                w.strikeLightning((p.getTargetBlock(null, 100).getLocation()));
+                w.strikeLightning((getTargetBlock(p, 1).getLocation()));
             }
             if (plugin.isVulcan.contains(p.getName())) {
                 Fireball f = event.getPlayer().getWorld().spawn(event.getPlayer().getLocation().add(event.getPlayer().getLocation().getDirection().normalize().multiply(3).toLocation(event.getPlayer().getWorld(), event.getPlayer().getLocation().getYaw(), event.getPlayer().getLocation().getPitch())).add(0, 1D, 0), Fireball.class);
@@ -267,11 +256,11 @@ public class godPowersPlayerListener implements Listener {
                 Block b = event.getClickedBlock();
                 Player p = event.getPlayer();
                 if (i != null) {
-                    if (i.getType() == Material.GOLD_SPADE && plugin.shovelDrops.contains(b.getTypeId())) {
+                    if (i.getType() == Material.GOLD_SPADE && plugin.shovelDrops.contains(b.getType())) {
                         mine(p, b, i);
-                    } else if (i.getType() == Material.GOLD_PICKAXE && plugin.pickDrops.contains(b.getTypeId())) {
+                    } else if (i.getType() == Material.GOLD_PICKAXE && plugin.pickDrops.contains(b.getType())) {
                         mine(p, b, i);
-                    } else if (i.getType() == Material.GOLD_AXE && plugin.axeDrops.contains(b.getTypeId())) {
+                    } else if (i.getType() == Material.GOLD_AXE && plugin.axeDrops.contains(b.getType())) {
                         mine(p, b, i);
                     }
                 }
@@ -325,5 +314,72 @@ public class godPowersPlayerListener implements Listener {
         }
         return target;
 
+    }
+
+    public Block getTargetBlock(Player player, int range) {
+        Location loc = player.getEyeLocation();
+        Vector dir = loc.getDirection().normalize();
+        Block b = null;
+        for (int i = 0; i <= range; i++) {
+            b = loc.add(dir).getBlock();
+        }
+        return b;
+    }
+
+    private Color getColor(int i) {
+        Color c = null;
+        if (i == 1) {
+            c = Color.AQUA;
+        }
+        if (i == 2) {
+            c = Color.BLACK;
+        }
+        if (i == 3) {
+            c = Color.BLUE;
+        }
+        if (i == 4) {
+            c = Color.FUCHSIA;
+        }
+        if (i == 5) {
+            c = Color.GRAY;
+        }
+        if (i == 6) {
+            c = Color.GREEN;
+        }
+        if (i == 7) {
+            c = Color.LIME;
+        }
+        if (i == 8) {
+            c = Color.MAROON;
+        }
+        if (i == 9) {
+            c = Color.NAVY;
+        }
+        if (i == 10) {
+            c = Color.OLIVE;
+        }
+        if (i == 11) {
+            c = Color.ORANGE;
+        }
+        if (i == 12) {
+            c = Color.PURPLE;
+        }
+        if (i == 13) {
+            c = Color.RED;
+        }
+        if (i == 14) {
+            c = Color.SILVER;
+        }
+        if (i == 15) {
+            c = Color.TEAL;
+        }
+        if (i == 16) {
+            c = Color.WHITE;
+        }
+        if (i == 17) {
+            c = Color.YELLOW;
+        }
+
+        return c;
     }
 }

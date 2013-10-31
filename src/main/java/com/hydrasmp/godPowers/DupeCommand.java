@@ -1,8 +1,6 @@
 package com.hydrasmp.godPowers;
 
 
-//import org.bukkit.World;
-
 import org.bukkit.ChatColor;
 import org.bukkit.Material;
 import org.bukkit.command.Command;

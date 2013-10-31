@@ -22,7 +22,7 @@ public class VulcanCommand implements CommandExecutor {
             if (player.hasPermission("godpowers.vulcan")) {
                 if (split.length == 0) {
                     /*
-					Location loc = player.getTargetBlock(null, 100).getLocation();
+                    Location loc = player.getTargetBlock(null, 100).getLocation();
 					loc.setY(player.getTargetBlock(null, 100).getLocation().getY()+1);
 					Location playerLoc = player.getLocation().add(loc);
 					*/

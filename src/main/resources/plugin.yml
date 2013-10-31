@@ -1,6 +1,6 @@
 name: godPowers
 main: com.hydrasmp.godPowers.godPowers
-version: 3.1
+version: 3.3
 author: Hydra SMP
 commands:
     godmode:
