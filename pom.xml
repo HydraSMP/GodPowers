@@ -2,7 +2,7 @@
     <modelVersion>4.0.0</modelVersion>
     <groupId>com.hydrasmp.godpowers</groupId>
     <artifactId>godPowers</artifactId>
-    <version>1.0</version>
+    <version>3.3</version>
     <name>godPowers</name>
     <url>https://github.com/hydrasmp</url>
     <properties>
