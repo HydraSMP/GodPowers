@@ -25,7 +25,7 @@ public class InfernoCommand implements CommandExecutor {
                     player.sendMessage(ChatColor.BLUE + "You feel your firey rage suddenly subside.");
                 } else {
                     plugin.isInferno.add(player.getName());
-                    player.sendMessage(ChatColor.DARK_RED + "You begin to become so angry that your firey rage causes the very ground beneath you to burn!");
+                    player.sendMessage(ChatColor.DARK_RED + "The gods grant you the firey rage of Hades!");
                 }
             } else {
                 player.sendMessage(ChatColor.RED + "The gods prevent you from using this command.");

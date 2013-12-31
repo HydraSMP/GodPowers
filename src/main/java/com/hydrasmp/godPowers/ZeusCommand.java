@@ -28,7 +28,7 @@ public class ZeusCommand implements CommandExecutor {
                     plugin.isZeus.remove(player.getName());
                     return true;
                 } else {
-                    player.sendMessage(ChatColor.BLUE + "You feel like you can strike lightning down from the heavens with a swing of your arm!");
+                    player.sendMessage(ChatColor.BLUE + "The gods suddenly grant you Zeus-like powers!");
                     plugin.isZeus.add(player.getName());
                     return true;
                 }

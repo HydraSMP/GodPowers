@@ -23,7 +23,7 @@ public class poseidonCommand implements CommandExecutor {
                 if (split.length == 0) {
                     if (plugin.isPoseidon.contains(player.getName())) {
                         plugin.isPoseidon.remove(player.getName());
-                        player.sendMessage(ChatColor.BLUE + "You feel your Poseidon like powers flowing away like water.");
+                        player.sendMessage(ChatColor.BLUE + "Suddenly, the gods remove your Poseidon like powers, rushing away like water.");
                         return true;
                     } else {
                         player.sendMessage(ChatColor.BLUE + "You suddenly feel a watery rush overcome you.");

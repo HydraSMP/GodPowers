@@ -27,11 +27,11 @@ public class VulcanCommand implements CommandExecutor {
 					Location playerLoc = player.getLocation().add(loc);
 					*/
                     if (plugin.isVulcan.contains(player.getName())) {
-                        player.sendMessage(ChatColor.BLUE + "You feel the sudden loss of the fire in your soul.");
+                        player.sendMessage(ChatColor.BLUE + "You feel the sudden loss of your ghastly powers.");
                         plugin.isVulcan.remove(player.getName());
                         return true;
                     } else {
-                        player.sendMessage(ChatColor.BLUE + "Goodness gracious, great balls of fire!");
+                        player.sendMessage(ChatColor.BLUE + "The gods suddenly grant you ghastly powers!");
                         plugin.isVulcan.add(player.getName());
                         return true;
                     }

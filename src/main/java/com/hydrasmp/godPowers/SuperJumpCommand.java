@@ -23,9 +23,9 @@ public class SuperJumpCommand implements CommandExecutor {
             if (player.hasPermission("godpowers.superjump")) {
                 if (plugin.superJumper.contains(player.getName())) {
                     plugin.superJumper.remove(player.getName());
-                    player.sendMessage(ChatColor.BLUE + "You can no longer jump great heights.");
+                    player.sendMessage(ChatColor.BLUE + "You can no longer leap great heights.");
                 } else {
-                    player.sendMessage(ChatColor.BLUE + "You feel like you can leap tall building in a single bound!");
+                    player.sendMessage(ChatColor.BLUE + "The gods suddenly grant you the ability to leap great heights");
                     plugin.superJumper.add(player.getName());
                 }
                 return true;

@@ -26,7 +26,7 @@ public class JesusCommand implements CommandExecutor {
             Jesus j = new Jesus();
             if (player.hasPermission("godpowers.jesus")) {
                 if (r == null) {
-                    player.sendMessage(ChatColor.BLUE + "You feel as if you can walk on water, just like Jesus!");
+                    player.sendMessage(ChatColor.BLUE + "The gods grant you the ability walk on water, just like Jesus!");
                     plugin.isJesus.add(player.getName());
                     Jesus.rafts.put(player.getName(), j.new Raft());
                     return true;

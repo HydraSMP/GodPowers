@@ -23,7 +23,7 @@ public class OnOneSecond extends BukkitRunnable {
             MedusaPlayer mplayer = it.next();
             if (mplayer.getTimeLeft() == 1) {
                 Player player = mplayer.getPlayer();
-                player.sendMessage(ChatColor.GREEN + "You feel your skin beginning to crack and suddenly you can move again.");
+                player.sendMessage(ChatColor.GREEN + "Suddenly your skin begins to crack and you can move again.");
                 plugin.isUnderMedusaInfluence.remove(mplayer);
             } else {
                 mplayer.setTimeLeft(mplayer.getTimeLeft() - 1);

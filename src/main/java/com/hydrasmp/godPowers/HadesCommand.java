@@ -23,7 +23,7 @@ public class HadesCommand implements CommandExecutor {
                         player.sendMessage(ChatColor.DARK_RED + "You no longer corrupt the ground you walk on.");
                         plugin.hades.remove(player.getName());
                     } else {
-                        player.sendMessage(ChatColor.DARK_RED + "The fires of the nether begin to corse through your veins.");
+                        player.sendMessage(ChatColor.DARK_RED + "The fires of the nether begin to coarse through your veins.");
                         plugin.hades.add(player.getName());
                     }
                     return true;

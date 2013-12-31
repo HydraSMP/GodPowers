@@ -29,7 +29,7 @@ public class hermesCommand implements CommandExecutor {
                         return true;
                     } else {
                         plugin.isHermes.add(player.getName());
-                        player.sendMessage(ChatColor.AQUA + "You feel like you have speed like hermes");
+                        player.sendMessage(ChatColor.AQUA + "The gods grant you speed like hermes");
                         return true;
                     }
                 }

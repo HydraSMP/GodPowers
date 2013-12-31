@@ -29,7 +29,7 @@ public class godModeCommand implements CommandExecutor {
                             return true;
                         }
                         plugin.godmodeEnabled.remove(player.getName());
-                        player.sendMessage(ChatColor.BLUE + "You have returned to being mortal.");
+                        player.sendMessage(ChatColor.BLUE + "The gods return you to your mortal state.");
                         player.setDisplayName(player.getName());
                         return true;
                     } else {
@@ -37,7 +37,7 @@ public class godModeCommand implements CommandExecutor {
                             player.sendMessage(ChatColor.BLUE + "You aren't invincible!");
                             return true;
                         }
-                        player.sendMessage(ChatColor.BLUE + "You are now invincible!");
+                        player.sendMessage(ChatColor.BLUE + "The gods have given you the gift of invincibility!");
                         player.setDisplayName(plugin.title + player.getDisplayName());
                         plugin.godmodeEnabled.add(player.getName());
                         player.setHealth(20);
@@ -57,9 +57,9 @@ public class godModeCommand implements CommandExecutor {
                                 return true;
                             }
                             plugin.godmodeEnabled.remove(targetPlayer.getName());
-                            targetPlayer.sendMessage(ChatColor.BLUE + player.getName() + " has returned you to being mortal.");
+                            targetPlayer.sendMessage(ChatColor.BLUE + player.getName() + " has returned your mortal state.");
                             targetPlayer.setDisplayName(targetPlayer.getName());
-                            player.sendMessage(ChatColor.BLUE + targetPlayer.getName() + " has been returned to being mortal.");
+                            player.sendMessage(ChatColor.BLUE + targetPlayer.getName() + " has been returned to their mortal state.");
                         } else {
                             if (command.getName().equalsIgnoreCase("godmodeoff")) {
                                 player.sendMessage("They aren't invincible!");
@@ -69,7 +69,7 @@ public class godModeCommand implements CommandExecutor {
                             targetPlayer.setDisplayName(plugin.title + targetPlayer.getName());
                             plugin.godmodeEnabled.add(targetPlayer.getName());
                             targetPlayer.setHealth(20);
-                            player.sendMessage(ChatColor.BLUE + targetPlayer.getName() + " has been given invincibility.");
+                            player.sendMessage(ChatColor.BLUE + targetPlayer.getName() + " has been given the gift of invincibility.");
                         }
                     }
                     return true;

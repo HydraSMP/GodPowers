@@ -27,7 +27,7 @@ public class DieCommand implements CommandExecutor {
                 } else {
                     player.setHealth(0);
                     plugin.dropDeadItems(player);
-                    player.sendMessage("You have died.");
+                    player.sendMessage("The gods have ended your suffering.");
                     return true;
                 }
             } else {

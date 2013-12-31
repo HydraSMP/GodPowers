@@ -20,10 +20,10 @@ public class GaiaCommand implements CommandExecutor {
             if (player.hasPermission("godpowers.gaia")) {
                 if (args.length == 0) {
                     if (plugin.gaia.contains(player.getName())) {
-                        player.sendMessage(ChatColor.DARK_GREEN + "The earth no longer rejuvenates with your every step.");
+                        player.sendMessage(ChatColor.DARK_GREEN + "Suddenly, the gods remove your gifts of rejuvenation.");
                         plugin.gaia.remove(player.getName());
                     } else {
-                        player.sendMessage(ChatColor.DARK_GREEN + "The essence of life spreads from you, rejuvenating the world around you.");
+                        player.sendMessage(ChatColor.DARK_GREEN + "The gods give you the gifts of earthly rejuvenation!");
                         plugin.gaia.add(player.getName());
                     }
                     return true;
