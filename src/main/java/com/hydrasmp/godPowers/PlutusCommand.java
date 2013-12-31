@@ -34,7 +34,7 @@ public class PlutusCommand implements CommandExecutor {
                     for (int i = 0; i < poss.length; i++) possible.add(poss[i]);
                     ItemStack i = player.getItemInHand();
                     if (i != null && possible.contains(i.getType())) {
-                        player.sendMessage(ChatColor.GOLD + "The gods grant you all of earth;s riches");
+                        player.sendMessage(ChatColor.GOLD + "The gods grant you all of earth's riches");
                         i.addUnsafeEnchantment(Enchantment.LOOT_BONUS_BLOCKS, 25);
                     } else {
                         player.sendMessage(ChatColor.RED + "You aren't holding the correct type of item.");
