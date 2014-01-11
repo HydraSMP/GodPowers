@@ -1,4 +1,6 @@
-package com.hydrasmp.godPowers;
+package com.hydrasmp.godPowers.listeners;
+
+import com.hydrasmp.godPowers.godPowers;
 
 import org.bukkit.enchantments.Enchantment;
 import org.bukkit.entity.Entity;

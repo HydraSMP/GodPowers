@@ -1,6 +1,10 @@
-package com.hydrasmp.godPowers;
+package com.hydrasmp.godPowers.listeners;
 
+import com.hydrasmp.godPowers.Jesus;
 import com.hydrasmp.godPowers.Jesus.Raft;
+import com.hydrasmp.godPowers.MedusaPlayer;
+import com.hydrasmp.godPowers.godPowers;
+
 import org.bukkit.*;
 import org.bukkit.block.Block;
 import org.bukkit.entity.Entity;

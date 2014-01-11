@@ -1,4 +1,6 @@
-package com.hydrasmp.godPowers;
+package com.hydrasmp.godPowers.commands;
+
+import com.hydrasmp.godPowers.godPowers;
 
 import org.bukkit.ChatColor;
 import org.bukkit.Material;

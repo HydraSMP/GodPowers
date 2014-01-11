@@ -1,8 +1,11 @@
-package com.hydrasmp.godPowers;
+package com.hydrasmp.godPowers.commands;
 
 //import org.bukkit.World;
 
+import com.hydrasmp.godPowers.Jesus;
 import com.hydrasmp.godPowers.Jesus.Raft;
+import com.hydrasmp.godPowers.godPowers;
+
 import org.bukkit.ChatColor;
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandExecutor;

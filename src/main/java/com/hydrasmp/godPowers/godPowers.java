@@ -1,6 +1,10 @@
 package com.hydrasmp.godPowers;
 
 
+import com.hydrasmp.godPowers.commands.*;
+import com.hydrasmp.godPowers.listeners.godPowersEntityListener;
+import com.hydrasmp.godPowers.listeners.godPowersPlayerListener;
+
 import org.bukkit.Location;
 import org.bukkit.Material;
 import org.bukkit.World;
@@ -271,7 +275,7 @@ public class godPowers extends JavaPlugin {
         debugees.put(player, value);
     }
 
-    void dropDeadItems(Player player) {
+    public void dropDeadItems(Player player) {
         if (player.getInventory() != null) {
             ItemStack[] item = player.getInventory().getContents();
             Location position = new Location(player.getWorld(), player.getLocation().getX(), player.getLocation().getY(), player.getLocation().getZ());
