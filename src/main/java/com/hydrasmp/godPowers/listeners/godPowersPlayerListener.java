@@ -243,7 +243,8 @@ public class godPowersPlayerListener implements Listener {
             Player p = event.getPlayer();
             World w = p.getWorld();
             if (plugin.isZeus.contains(p.getName())) {
-                w.strikeLightning((getTargetBlock(p, 1).getLocation()));
+                //p.getTargetBlock is a Magic Value!
+                w.strikeLightning((p.getTargetBlock(null, 100).getLocation()));
             }
             if (plugin.isVulcan.contains(p.getName())) {
                 Fireball f = event.getPlayer().getWorld().spawn(event.getPlayer().getLocation().add(event.getPlayer().getLocation().getDirection().normalize().multiply(3).toLocation(event.getPlayer().getWorld(), event.getPlayer().getLocation().getYaw(), event.getPlayer().getLocation().getPitch())).add(0, 1D, 0), Fireball.class);
@@ -318,16 +319,6 @@ public class godPowersPlayerListener implements Listener {
         }
         return target;
 
-    }
-
-    public Block getTargetBlock(Player player, int range) {
-        Location loc = player.getEyeLocation();
-        Vector dir = loc.getDirection().normalize();
-        Block b = null;
-        for (int i = 0; i <= range; i++) {
-            b = loc.add(dir).getBlock();
-        }
-        return b;
     }
 
     private Color getColor(int i) {
