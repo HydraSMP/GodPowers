@@ -16,10 +16,10 @@ import org.bukkit.inventory.ItemStack;
 import org.bukkit.util.Vector;
 
 
-public class godPowersEntityListener implements Listener {
+public class EntityListener implements Listener {
     private final godPowers plugin;
 
-    public godPowersEntityListener(godPowers instance) {
+    public EntityListener(godPowers instance) {
         plugin = instance;
     }
 

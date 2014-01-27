@@ -26,7 +26,7 @@ import java.util.List;
 import java.util.ListIterator;
 
 
-public class godPowersPlayerListener implements Listener {
+public class PlayerListener implements Listener {
 
 
     int health = 0;
@@ -49,7 +49,7 @@ public class godPowersPlayerListener implements Listener {
         }
     }
 
-    public godPowersPlayerListener(godPowers instance) {
+    public PlayerListener(godPowers instance) {
         plugin = instance;
     }
 

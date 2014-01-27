@@ -10,11 +10,11 @@ import org.bukkit.command.CommandExecutor;
 import org.bukkit.command.CommandSender;
 import org.bukkit.entity.Player;
 
-public class godModeCommand implements CommandExecutor {
+public class GodModeCommand implements CommandExecutor {
     private Player player;
     private final godPowers plugin;
 
-    public godModeCommand(godPowers instance) {
+    public GodModeCommand(godPowers instance) {
         plugin = instance;
     }
 

@@ -2,8 +2,8 @@ package com.hydrasmp.godPowers;
 
 
 import com.hydrasmp.godPowers.commands.*;
-import com.hydrasmp.godPowers.listeners.godPowersEntityListener;
-import com.hydrasmp.godPowers.listeners.godPowersPlayerListener;
+import com.hydrasmp.godPowers.listeners.EntityListener;
+import com.hydrasmp.godPowers.listeners.PlayerListener;
 
 import org.bukkit.Location;
 import org.bukkit.Material;
@@ -99,13 +99,13 @@ public class godPowers extends JavaPlugin {
             System.out.println(error + "zeus.");
         }
         try {
-            getCommand("godmode").setExecutor(new godModeCommand(this));
+            getCommand("godmode").setExecutor(new GodModeCommand(this));
             list.put("godmode", "<Player> - Toggles godmode on and off.");
         } catch (Exception e) {
             System.out.println(error + "godmode.");
         }
-        getCommand("godmodeon").setExecutor(new godModeCommand(this));
-        getCommand("godmodeoff").setExecutor(new godModeCommand(this));
+        getCommand("godmodeon").setExecutor(new GodModeCommand(this));
+        getCommand("godmodeoff").setExecutor(new GodModeCommand(this));
         try {
             getCommand("jesus").setExecutor(new JesusCommand(this));
             list.put("jesus", "<Player> - Allows you to walk on water and lava");
@@ -162,7 +162,7 @@ public class godPowers extends JavaPlugin {
             System.out.println(error + "heal.");
         }
         try {
-            getCommand("godpowers").setExecutor(new godPowersCommand(this));
+            getCommand("godpowers").setExecutor(new GodPowersCommand(this));
             list.put("godpowers", "- Displays this message.");
         } catch (Exception e) {
             System.out.println(error + "godpowers. How dare they!");
@@ -228,8 +228,8 @@ public class godPowers extends JavaPlugin {
             System.out.println(error + "poseidon.");
         }
         PluginManager pm = getServer().getPluginManager();
-        pm.registerEvents(new godPowersEntityListener(this), this);
-        pm.registerEvents(new godPowersPlayerListener(this), this);
+        pm.registerEvents(new EntityListener(this), this);
+        pm.registerEvents(new PlayerListener(this), this);
         PluginDescriptionFile pdfFile = this.getDescription();
         System.out.println(pdfFile.getName() + " version " + pdfFile.getVersion() + " is enabled!");
         populateLists();
