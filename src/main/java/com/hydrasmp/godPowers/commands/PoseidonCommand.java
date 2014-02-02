@@ -8,11 +8,11 @@ import org.bukkit.command.CommandExecutor;
 import org.bukkit.command.CommandSender;
 import org.bukkit.entity.Player;
 
-public class poseidonCommand implements CommandExecutor {
+public class PoseidonCommand implements CommandExecutor {
     private Player player;
     private final godPowers plugin;
 
-    public poseidonCommand(godPowers instance) {
+    public PoseidonCommand(godPowers instance) {
         plugin = instance;
     }
 

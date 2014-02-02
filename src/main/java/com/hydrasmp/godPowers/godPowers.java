@@ -216,13 +216,13 @@ public class godPowers extends JavaPlugin {
             System.out.println(error + "medusa.");
         }
         try {
-            getCommand("hermes").setExecutor(new hermesCommand(this));
+            getCommand("hermes").setExecutor(new HermesCommand(this));
             list.put("hermes", "- Gives you the speed and ability to send letters.");
         } catch (Exception e) {
             System.out.println(error + "hermes. ");
         }
         try {
-            getCommand("poseidon").setExecutor(new poseidonCommand(this));
+            getCommand("poseidon").setExecutor(new PoseidonCommand(this));
             list.put("poseidon", "- Gives you Poseidon like powers while in water.");
         } catch (Exception e) {
             System.out.println(error + "poseidon.");

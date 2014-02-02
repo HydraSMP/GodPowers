@@ -8,11 +8,11 @@ import org.bukkit.command.CommandExecutor;
 import org.bukkit.command.CommandSender;
 import org.bukkit.entity.Player;
 
-public class hermesCommand implements CommandExecutor {
+public class HermesCommand implements CommandExecutor {
     private Player player;
     private final godPowers plugin;
 
-    public hermesCommand(godPowers instance) {
+    public HermesCommand(godPowers instance) {
         plugin = instance;
     }
 
