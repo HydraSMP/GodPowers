@@ -33,12 +33,12 @@ public class RepairCommand implements CommandExecutor {
                         if (i != null && possible.contains(i.getType())) {
                             if (player.getItemInHand().getDurability() == 0) {
                                 player.sendMessage(ChatColor.BLUE + "The gods cannot repair that which is not broken!");
-                            } else if (player.getItemInHand().getType() == Material.AIR) {
-                                player.sendMessage(ChatColor.BLUE + "The gods cannot repair nothing!");
                             } else {
                                 player.getItemInHand().setDurability((short) 0);
                                 player.sendMessage(ChatColor.BLUE + "The gods have repaired the item in your hand!");
                             }
+                        } else if (player.getItemInHand().getType() == Material.AIR) {
+                            player.sendMessage(ChatColor.BLUE + "The gods cannot repair nothing!");
                         } else {
                             player.sendMessage(ChatColor.RED + "Not even the gods are allowed to repair this item!");
                         }
