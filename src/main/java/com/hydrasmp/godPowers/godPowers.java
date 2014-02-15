@@ -104,8 +104,16 @@ public class godPowers extends JavaPlugin {
         } catch (Exception e) {
             System.out.println(error + "godmode.");
         }
-        getCommand("godmodeon").setExecutor(new GodModeCommand(this));
-        getCommand("godmodeoff").setExecutor(new GodModeCommand(this));
+        try {
+            getCommand("godmodeon").setExecutor(new GodModeCommand(this));
+        } catch (Exception e) {
+            System.out.println(error + "godmodeon.");
+        }
+        try {
+            getCommand("godmodeoff").setExecutor(new GodModeCommand(this));
+        } catch (Exception e) {
+            System.out.println(error + "godmodeoff.");
+        }
         try {
             getCommand("jesus").setExecutor(new JesusCommand(this));
             list.put("jesus", "<Player> - Allows you to walk on water and lava");
@@ -123,13 +131,12 @@ public class godPowers extends JavaPlugin {
             list.put("slay", "[Player] <arrows/fire/drop> - Kills a player with/without the optional method.");
         } catch (Exception e) {
             System.out.println(error + "slay.");
-            try {
-                getCommand("smite").setExecutor(new SlayCommand(this));
-                System.out.println(error + "slay. " + "Registered smite in place of slay.");
-                list.put("smite", "[Player] <arrows/fire/drop> - Kills a player with/without the optional method.");
-            } catch (Exception e1) {
-                System.out.println(error + "smite in place of slay.");
-            }
+        }
+        try {
+            getCommand("smite").setExecutor(new SlayCommand(this));
+            list.put("smite", "[Player] <arrows/fire/drop> - Kills a player with/without the optional method.");
+        } catch (Exception e1) {
+            System.out.println(error + "smite.");
         }
         try {
             getCommand("maim").setExecutor(new MaimCommand(this));
@@ -172,6 +179,11 @@ public class godPowers extends JavaPlugin {
             list.put("vulcan", "- Fling fireballs at those pesky mortals!");
         } catch (Exception e) {
             System.out.println(error + "vulcan.");
+        }
+        try {
+            getCommand("myballsareonfire").setExecutor(new VulcanCommand(this));
+        } catch (Exception e) {
+            System.out.println(error + "myballsareonfire.");
         }
         try {
             getCommand("demigod").setExecutor(new DemiGodCommand(this));
@@ -232,13 +244,11 @@ public class godPowers extends JavaPlugin {
             list.put("repair", "- Repairs the item you hold.");
         } catch (Exception e) {
             System.out.println(error + "repair.");
-            try {
-                getCommand("itemrepair").setExecutor(new RepairCommand(this));
-                System.out.println(error + "repair. " + "Registered itemrepair in place of repair.");
-                list.put("repair", "- Repairs the item you hold.");
-            } catch (Exception e1) {
-                System.out.println(error + "itemrepair in place of repair.");
-            }
+        }
+        try {
+            getCommand("itemrepair").setExecutor(new RepairCommand(this));
+        } catch (Exception e) {
+            System.out.println(error + "itemrepair.");
         }
         PluginManager pm = getServer().getPluginManager();
         pm.registerEvents(new EntityListener(this), this);

@@ -46,8 +46,8 @@ commands:
         description: Burn the ground beneath you in your fiery rage!
         usage: /inferno
     itemrepair:
-            description: See repair.
-            usage: /itemrepair
+        description: See repair.
+        usage: /itemrepair
     jesus:
         description: Grants you the ability to walk on water and lava!
         usage: /jesus
@@ -72,6 +72,9 @@ commands:
     slay:
         description: Kills the specified player!
         usage: /slay
+    smite:
+        description: See slay.
+        usage: /smite
     superjump:
         description: Leap tall structures in a single bound!
         usage: /superjump
