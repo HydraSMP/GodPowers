@@ -3,6 +3,7 @@ package com.hydrasmp.godPowers.commands;
 import com.hydrasmp.godPowers.MedusaPlayer;
 import com.hydrasmp.godPowers.godPowers;
 
+import com.hydrasmp.godPowers.util.StringHandler;
 import org.bukkit.ChatColor;
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandExecutor;
@@ -25,21 +26,21 @@ public class MedusaCommand implements CommandExecutor {
             player = (Player) sender;
             if (player.hasPermission("godpowers.medusa")) {
                 if (split.length > 0) {
-                    player.sendMessage(ChatColor.RED + "Incorrect syntax. Correct usage: '/medusa'");
+                    player.sendMessage(ChatColor.RED + StringHandler.MEDUSA_SYNTAX);
                     return true;
                 } else {
                     if (!plugin.isMedusa.contains(player.getName())) {
-                        player.sendMessage(ChatColor.GREEN + "The gods have cursed you with the power to turn people to stone.");
+                        player.sendMessage(ChatColor.GREEN + StringHandler.MEDUSA_ADD);
                         plugin.isMedusa.add(player.getName());
                     } else {
-                        player.sendMessage(ChatColor.GREEN + "The gods have lifted the curse upon you.");
+                        player.sendMessage(ChatColor.GREEN + StringHandler.MEDUSA_REMOVE);
                         plugin.isMedusa.remove(player.getName());
                         ListIterator<MedusaPlayer> it = plugin.isUnderMedusaInfluence.listIterator();
                         if (it.hasNext()) {
                             MedusaPlayer mplayer = it.next();
                             if (mplayer.getMedusa().equals(player)) {
                                 Player player = mplayer.getPlayer();
-                                player.sendMessage(ChatColor.AQUA + "Medusa has suddenly disappeared, you can move again.");
+                                player.sendMessage(ChatColor.AQUA + StringHandler.MEDUSA_GONE);
                                 plugin.isUnderMedusaInfluence.remove(mplayer);
                             }
                         }
@@ -47,7 +48,7 @@ public class MedusaCommand implements CommandExecutor {
                     return true;
                 }
             } else {
-                player.sendMessage(ChatColor.DARK_RED + "The gods prevent you from using this command.");
+                player.sendMessage(ChatColor.DARK_RED + StringHandler.GODPOWERS_NOPERMISSION);
             }
         }
         return false;

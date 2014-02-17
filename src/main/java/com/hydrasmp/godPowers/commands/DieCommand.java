@@ -4,6 +4,7 @@ package com.hydrasmp.godPowers.commands;
 
 import com.hydrasmp.godPowers.godPowers;
 
+import com.hydrasmp.godPowers.util.StringHandler;
 import org.bukkit.ChatColor;
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandExecutor;
@@ -24,16 +25,16 @@ public class DieCommand implements CommandExecutor {
             player = (Player) sender;
             if (player.hasPermission("godpowers.die")) {
                 if (plugin.godmodeEnabled.contains(player.getName())) {
-                    player.sendMessage(ChatColor.BLUE + "Your godly powers prevent you from death.");
+                    player.sendMessage(ChatColor.BLUE + StringHandler.DIE_CANTDIE);
                     return true;
                 } else {
                     player.setHealth(0);
                     plugin.dropDeadItems(player);
-                    player.sendMessage("The gods have ended your suffering.");
+                    player.sendMessage(StringHandler.DIE_DIE);
                     return true;
                 }
             } else {
-                player.sendMessage(ChatColor.DARK_RED + "The gods prevent you from using this command.");
+                player.sendMessage(ChatColor.DARK_RED + StringHandler.GODPOWERS_NOPERMISSION);
                 return true;
             }
         }

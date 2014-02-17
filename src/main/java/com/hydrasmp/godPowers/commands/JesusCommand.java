@@ -6,6 +6,7 @@ import com.hydrasmp.godPowers.Jesus;
 import com.hydrasmp.godPowers.Jesus.Raft;
 import com.hydrasmp.godPowers.godPowers;
 
+import com.hydrasmp.godPowers.util.StringHandler;
 import org.bukkit.ChatColor;
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandExecutor;
@@ -29,19 +30,19 @@ public class JesusCommand implements CommandExecutor {
             Jesus j = new Jesus();
             if (player.hasPermission("godpowers.jesus")) {
                 if (r == null) {
-                    player.sendMessage(ChatColor.BLUE + "The gods grant you the ability walk on water, just like Jesus!");
+                    player.sendMessage(ChatColor.BLUE + StringHandler.JESUS_ADD);
                     plugin.isJesus.add(player.getName());
                     Jesus.rafts.put(player.getName(), j.new Raft());
                     return true;
                 } else {
-                    player.sendMessage(ChatColor.BLUE + "You feel your Jesus-like powers draining from you.");
+                    player.sendMessage(ChatColor.BLUE + StringHandler.JESUS_REMOVE);
                     Jesus.rafts.remove(player.getName());
                     plugin.isJesus.remove(player.getName());
                     r.destroyJesusRaft(player);
                     return true;
                 }
             } else {
-                player.sendMessage(ChatColor.DARK_RED + "The gods prevent you from using this command.");
+                player.sendMessage(ChatColor.DARK_RED + StringHandler.GODPOWERS_NOPERMISSION);
                 return true;
             }
         }

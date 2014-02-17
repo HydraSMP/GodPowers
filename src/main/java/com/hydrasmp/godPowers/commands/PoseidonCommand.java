@@ -2,6 +2,7 @@ package com.hydrasmp.godPowers.commands;
 
 import com.hydrasmp.godPowers.godPowers;
 
+import com.hydrasmp.godPowers.util.StringHandler;
 import org.bukkit.ChatColor;
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandExecutor;
@@ -25,19 +26,19 @@ public class PoseidonCommand implements CommandExecutor {
                 if (split.length == 0) {
                     if (plugin.isPoseidon.contains(player.getName())) {
                         plugin.isPoseidon.remove(player.getName());
-                        player.sendMessage(ChatColor.BLUE + "Suddenly, the gods remove your Poseidon like powers, rushing away like water.");
+                        player.sendMessage(ChatColor.BLUE + StringHandler.POSEIDON_REMOVE);
                         return true;
                     } else {
-                        player.sendMessage(ChatColor.BLUE + "You suddenly feel a watery rush overcome you.");
+                        player.sendMessage(ChatColor.BLUE + StringHandler.POSEIDON_ADD);
                         plugin.isPoseidon.add(player.getName());
                         return true;
                     }
                 } else {
-                    player.sendMessage(ChatColor.RED + "Please use '/poseidon' to activate your powers.");
+                    player.sendMessage(ChatColor.RED + StringHandler.POSEIDON_YOURSELF);
                     return true;
                 }
             } else {
-                player.sendMessage(ChatColor.DARK_RED + "The gods prevent you from using this command.");
+                player.sendMessage(ChatColor.DARK_RED + StringHandler.GODPOWERS_NOPERMISSION);
                 return true;
             }
         }

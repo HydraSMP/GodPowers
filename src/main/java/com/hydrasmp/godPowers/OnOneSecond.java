@@ -1,5 +1,6 @@
 package com.hydrasmp.godPowers;
 
+import com.hydrasmp.godPowers.util.StringHandler;
 import org.bukkit.ChatColor;
 import org.bukkit.entity.Player;
 import org.bukkit.scheduler.BukkitRunnable;
@@ -23,7 +24,7 @@ public class OnOneSecond extends BukkitRunnable {
             MedusaPlayer mplayer = it.next();
             if (mplayer.getTimeLeft() == 1) {
                 Player player = mplayer.getPlayer();
-                player.sendMessage(ChatColor.GREEN + "Suddenly your skin begins to crack and you can move again.");
+                player.sendMessage(ChatColor.GREEN + StringHandler.MEDUSA_UNCURSED);
                 plugin.isUnderMedusaInfluence.remove(mplayer);
             } else {
                 mplayer.setTimeLeft(mplayer.getTimeLeft() - 1);

@@ -5,6 +5,7 @@ import com.hydrasmp.godPowers.Jesus.Raft;
 import com.hydrasmp.godPowers.MedusaPlayer;
 import com.hydrasmp.godPowers.godPowers;
 
+import com.hydrasmp.godPowers.util.StringHandler;
 import org.bukkit.*;
 import org.bukkit.block.Block;
 import org.bukkit.entity.Entity;
@@ -59,7 +60,7 @@ public class PlayerListener implements Listener {
         if (plugin.godModeOnLogin && player.hasPermission("godpowers.godmodeonlogin")) {
             plugin.getServer().getScheduler().scheduleSyncDelayedTask(plugin, new Runnable() {
                 public void run() {
-                    player.sendMessage("As you enter the world, you feel your godly powers returning.");
+                    player.sendMessage(StringHandler.GODMODE_LOGIN);
                     player.setDisplayName(plugin.title + player.getDisplayName());
                     plugin.godmodeEnabled.add(player.getName());
                     player.setHealth(player.getMaxHealth());
@@ -117,7 +118,7 @@ public class PlayerListener implements Listener {
                 }
                 if (!isAlreadyUnder) {
                     plugin.isUnderMedusaInfluence.add(new MedusaPlayer(target, plugin.medusaFreezeTime, player));
-                    target.sendMessage(ChatColor.GREEN + "Medusa has looked at you, you feel your skin turning to stone. You cannot move for " + plugin.medusaFreezeTime + " seconds.");
+                    target.sendMessage(ChatColor.GREEN + StringHandler.MEDUSA_CURSED + " " + plugin.medusaFreezeTime + " seconds.");
                 }
             }
         }
@@ -135,7 +136,7 @@ public class PlayerListener implements Listener {
                 double zto = event.getTo().getZ();
                 if (!(xfrom == xto && yfrom == yto && zfrom == zto)) {
                     p.teleport(from);
-                    event.getPlayer().sendMessage(ChatColor.RED + "You cannot move while you are under Medusa's spell.");
+                    event.getPlayer().sendMessage(ChatColor.RED + StringHandler.MEDUSA_MOVEATTEMPT);
                 }
             }
         }

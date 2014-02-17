@@ -2,6 +2,7 @@ package com.hydrasmp.godPowers.commands;
 
 import com.hydrasmp.godPowers.godPowers;
 
+import com.hydrasmp.godPowers.util.StringHandler;
 import org.bukkit.ChatColor;
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandExecutor;
@@ -22,19 +23,19 @@ public class HadesCommand implements CommandExecutor {
             if (player.hasPermission("godpowers.hades")) {
                 if (args.length == 0) {
                     if (plugin.hades.contains(player.getName())) {
-                        player.sendMessage(ChatColor.DARK_RED + "You no longer corrupt the ground you walk on.");
+                        player.sendMessage(ChatColor.DARK_RED + StringHandler.HADES_REMOVE);
                         plugin.hades.remove(player.getName());
                     } else {
-                        player.sendMessage(ChatColor.DARK_RED + "The fires of the nether begin to coarse through your veins.");
+                        player.sendMessage(ChatColor.DARK_RED + StringHandler.HADES_REMOVE);
                         plugin.hades.add(player.getName());
                     }
                     return true;
                 } else {
-                    player.sendMessage(ChatColor.RED + "Incorrect syntax, use '/hades'");
+                    player.sendMessage(ChatColor.RED + StringHandler.HADES_SYNTAX);
                     return true;
                 }
             } else {
-                player.sendMessage(ChatColor.DARK_RED + "The gods prevent you from using this command.");
+                player.sendMessage(ChatColor.DARK_RED + StringHandler.GODPOWERS_NOPERMISSION);
                 return true;
             }
         }
