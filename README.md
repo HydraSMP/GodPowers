@@ -1,5 +1,6 @@
-godPowers @ Hydra SMP [![Build Status](https://travis-ci.org/HydraSMP/godPowers.png?branch=master)](https://travis-ci.org/HydraSMP/godPowers)
+godPowers @ Hydra SMP
 ==================
-This is a private fork made only for this server. To get the official version of godPowers please go to https://bit.ly/GodPowers
-
+This was once a private fork of GodPowers. We've since been granted push access to GodPower's Official Repo :)
+This repo will remain for archiving purposes but will no longer be updated, please see the official repo for issue tracking and recent code changes to the project
+https://github.com/JFKingsley/GodPowers
 
